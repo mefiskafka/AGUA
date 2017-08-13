@@ -1,0 +1,2303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SIFAYCOModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SIFAYCOModelStoreContainer">
+          <EntitySet Name="CT_ANOMALIAS" EntityType="SIFAYCOModel.Store.CT_ANOMALIAS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CT_CAJAS" EntityType="SIFAYCOModel.Store.CT_CAJAS" store:Type="Tables" store:Schema="dbo" store:Name="CT_CAJAS">
+            <DefiningQuery>SELECT 
+      [CT_CAJAS].[ID_CAJAS] AS [ID_CAJAS], 
+      [CT_CAJAS].[CLAVE] AS [CLAVE], 
+      [CT_CAJAS].[DESCRIPCION] AS [DESCRIPCION]
+      FROM [dbo].[CT_CAJAS] AS [CT_CAJAS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CT_GIROS" EntityType="SIFAYCOModel.Store.CT_GIROS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CT_INSTITUCIONES_BANCARIAS" EntityType="SIFAYCOModel.Store.CT_INSTITUCIONES_BANCARIAS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CT_METODOS_DE_PAGO" EntityType="SIFAYCOModel.Store.CT_METODOS_DE_PAGO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CT_RANGO_TARIFA" EntityType="SIFAYCOModel.Store.CT_RANGO_TARIFA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CT_STATUS_SERVICIO" EntityType="SIFAYCOModel.Store.CT_STATUS_SERVICIO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CT_TARIFAS" EntityType="SIFAYCOModel.Store.CT_TARIFAS" store:Type="Tables" store:Schema="dbo" store:Name="CT_TARIFAS">
+            <DefiningQuery>SELECT 
+      [CT_TARIFAS].[ID_TARIFA] AS [ID_TARIFA], 
+      [CT_TARIFAS].[USO] AS [USO], 
+      [CT_TARIFAS].[CLASE] AS [CLASE], 
+      [CT_TARIFAS].[SERVICIO] AS [SERVICIO], 
+      [CT_TARIFAS].[RANGO] AS [RANGO], 
+      [CT_TARIFAS].[IMPORTE_CONSUMO_m3] AS [IMPORTE_CONSUMO_m3], 
+      [CT_TARIFAS].[CONSUMO_m3] AS [CONSUMO_m3], 
+      [CT_TARIFAS].[IMPORTE] AS [IMPORTE], 
+      [CT_TARIFAS].[IMPORTE_DRENAJE] AS [IMPORTE_DRENAJE]
+      FROM [dbo].[CT_TARIFAS] AS [CT_TARIFAS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CT_TIPOS_OTROS_CARGOS" EntityType="SIFAYCOModel.Store.CT_TIPOS_OTROS_CARGOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CT_TOMAS" EntityType="SIFAYCOModel.Store.CT_TOMAS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CT_USO" EntityType="SIFAYCOModel.Store.CT_USO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="SIFAYCOModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_CONFIGURACION_GENERAL" EntityType="SIFAYCOModel.Store.T_CONFIGURACION_GENERAL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_CONTRATOS" EntityType="SIFAYCOModel.Store.T_CONTRATOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_DRENAJE" EntityType="SIFAYCOModel.Store.T_DRENAJE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_EMPLEADOS" EntityType="SIFAYCOModel.Store.T_EMPLEADOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_FRECUENCIA" EntityType="SIFAYCOModel.Store.T_FRECUENCIA" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_LECTURAS_MEDIDOR" EntityType="SIFAYCOModel.Store.T_LECTURAS_MEDIDOR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_OTROS_CARGOS" EntityType="SIFAYCOModel.Store.T_OTROS_CARGOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_PAGOS" EntityType="SIFAYCOModel.Store.T_PAGOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_UNION_PAGO_LECTURA_MEDIDOR" EntityType="SIFAYCOModel.Store.T_UNION_PAGO_LECTURA_MEDIDOR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_UNION_PAGO_OTRO_CARGO" EntityType="SIFAYCOModel.Store.T_UNION_PAGO_OTRO_CARGO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_USUARIO_SERVICIO" EntityType="SIFAYCOModel.Store.T_USUARIO_SERVICIO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="V_DRENAJE" EntityType="SIFAYCOModel.Store.V_DRENAJE" store:Type="Views" store:Schema="dbo" store:Name="V_DRENAJE">
+            <DefiningQuery>SELECT 
+      [V_DRENAJE].[ID_DRENAJE] AS [ID_DRENAJE], 
+      [V_DRENAJE].[ID_EMPLEADO_CAPTURA] AS [ID_EMPLEADO_CAPTURA], 
+      [V_DRENAJE].[ID_CONTRATO] AS [ID_CONTRATO], 
+      [V_DRENAJE].[FECHA_CAPTURA] AS [FECHA_CAPTURA], 
+      [V_DRENAJE].[IMPORTE_DRENAJE] AS [IMPORTE_DRENAJE], 
+      [V_DRENAJE].[PORCENTAJE_DESCUENTO] AS [PORCENTAJE_DESCUENTO], 
+      [V_DRENAJE].[IMPORTE_ANOMALIA_CON_DESCUENTO] AS [IMPORTE_ANOMALIA_CON_DESCUENTO], 
+      [V_DRENAJE].[IMPORTE_DRENAJE_AJUSTADO] AS [IMPORTE_DRENAJE_AJUSTADO], 
+      [V_DRENAJE].[IMPORTE_DRENAJE_FINAL] AS [IMPORTE_DRENAJE_FINAL], 
+      [V_DRENAJE].[FECHA_ALTA_REGISTRO] AS [FECHA_ALTA_REGISTRO], 
+      [V_DRENAJE].[FECHA_MODIFICACION_REGISTRO] AS [FECHA_MODIFICACION_REGISTRO]
+      FROM [dbo].[V_DRENAJE] AS [V_DRENAJE]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_LECTURAS_MEDIDOR" EntityType="SIFAYCOModel.Store.V_LECTURAS_MEDIDOR" store:Type="Views" store:Schema="dbo" store:Name="V_LECTURAS_MEDIDOR">
+            <DefiningQuery>SELECT 
+      [V_LECTURAS_MEDIDOR].[ID_LECTURA_MEDIDOR] AS [ID_LECTURA_MEDIDOR], 
+      [V_LECTURAS_MEDIDOR].[ID_CONTRATO] AS [ID_CONTRATO], 
+      [V_LECTURAS_MEDIDOR].[FECHA_LECTURA_SITIO] AS [FECHA_LECTURA_SITIO], 
+      [V_LECTURAS_MEDIDOR].[ID_EMPLEADO_CAPTURA] AS [ID_EMPLEADO_CAPTURA], 
+      [V_LECTURAS_MEDIDOR].[ID_EMPLEADO_LECTURISTA] AS [ID_EMPLEADO_LECTURISTA], 
+      [V_LECTURAS_MEDIDOR].[ES_TARIFA] AS [ES_TARIFA], 
+      [V_LECTURAS_MEDIDOR].[LECTURA_MEDIDOR_m3] AS [LECTURA_MEDIDOR_m3], 
+      [V_LECTURAS_MEDIDOR].[CONSUMO_m3] AS [CONSUMO_m3], 
+      [V_LECTURAS_MEDIDOR].[COSTO_METRO_CUBICO] AS [COSTO_METRO_CUBICO], 
+      [V_LECTURAS_MEDIDOR].[IMPORTE_CONSUMO] AS [IMPORTE_CONSUMO], 
+      [V_LECTURAS_MEDIDOR].[PORCENTAJE_DESCUENTO] AS [PORCENTAJE_DESCUENTO], 
+      [V_LECTURAS_MEDIDOR].[IMPORTE_CONSUMO_CON_DESCUENTO] AS [IMPORTE_CONSUMO_CON_DESCUENTO], 
+      [V_LECTURAS_MEDIDOR].[IMPORTE_CONSUMO_AJUSTADO] AS [IMPORTE_CONSUMO_AJUSTADO], 
+      [V_LECTURAS_MEDIDOR].[IMPORTE_CONSUMO_FINAL] AS [IMPORTE_CONSUMO_FINAL], 
+      [V_LECTURAS_MEDIDOR].[FECHA_ALTA_REGISTRO] AS [FECHA_ALTA_REGISTRO], 
+      [V_LECTURAS_MEDIDOR].[FECHA_MODIFICACION_REGISTRO] AS [FECHA_MODIFICACION_REGISTRO]
+      FROM [dbo].[V_LECTURAS_MEDIDOR] AS [V_LECTURAS_MEDIDOR]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_OTROS_CARGOS" EntityType="SIFAYCOModel.Store.V_OTROS_CARGOS" store:Type="Views" store:Schema="dbo" store:Name="V_OTROS_CARGOS">
+            <DefiningQuery>SELECT 
+      [V_OTROS_CARGOS].[ID_OTRO_CARGO] AS [ID_OTRO_CARGO], 
+      [V_OTROS_CARGOS].[ID_EMPLEADO_CAPTURA] AS [ID_EMPLEADO_CAPTURA], 
+      [V_OTROS_CARGOS].[ID_EMPLEADO_REPORTA] AS [ID_EMPLEADO_REPORTA], 
+      [V_OTROS_CARGOS].[ID_CONTRATO] AS [ID_CONTRATO], 
+      [V_OTROS_CARGOS].[ID_ANOMALIA] AS [ID_ANOMALIA], 
+      [V_OTROS_CARGOS].[FECHA_CAPTURA] AS [FECHA_CAPTURA], 
+      [V_OTROS_CARGOS].[IMPORTE_OTRO_CARGO] AS [IMPORTE_OTRO_CARGO], 
+      [V_OTROS_CARGOS].[PORCENTAJE_DESCUENTO] AS [PORCENTAJE_DESCUENTO], 
+      [V_OTROS_CARGOS].[IMPORTE_OTRO_CARGO_CON_DESCUENTO] AS [IMPORTE_OTRO_CARGO_CON_DESCUENTO], 
+      [V_OTROS_CARGOS].[IMPORTE_OTRO_CARGO_AJUSTADO] AS [IMPORTE_OTRO_CARGO_AJUSTADO], 
+      [V_OTROS_CARGOS].[IMPORTE_OTRO_CARGO_FINAL] AS [IMPORTE_OTRO_CARGO_FINAL], 
+      [V_OTROS_CARGOS].[FECHA_ALTA_REGISTRO] AS [FECHA_ALTA_REGISTRO], 
+      [V_OTROS_CARGOS].[FECHA_MODIFICACION_REGISTRO] AS [FECHA_MODIFICACION_REGISTRO]
+      FROM [dbo].[V_OTROS_CARGOS] AS [V_OTROS_CARGOS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_TARIFAS" EntityType="SIFAYCOModel.Store.V_TARIFAS" store:Type="Views" store:Schema="dbo" store:Name="V_TARIFAS">
+            <DefiningQuery>SELECT 
+      [V_TARIFAS].[DESCRIPCION] AS [DESCRIPCION], 
+      [V_TARIFAS].[CLASE] AS [CLASE], 
+      [V_TARIFAS].[SERVICIO] AS [SERVICIO], 
+      [V_TARIFAS].[RANGO] AS [RANGO], 
+      [V_TARIFAS].[IMPORTE_CONSUMO_m3] AS [IMPORTE_CONSUMO_m3], 
+      [V_TARIFAS].[CONSUMO_m3] AS [CONSUMO_m3], 
+      [V_TARIFAS].[IMPORTE] AS [IMPORTE]
+      FROM [dbo].[V_TARIFAS] AS [V_TARIFAS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_UNION_PAGO_LECTURA_MEDIDOR" EntityType="SIFAYCOModel.Store.V_UNION_PAGO_LECTURA_MEDIDOR" store:Type="Views" store:Schema="dbo" store:Name="V_UNION_PAGO_LECTURA_MEDIDOR">
+            <DefiningQuery>SELECT 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[ID_LECTURA_MEDIDOR] AS [ID_LECTURA_MEDIDOR], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[ID_CONTRATO] AS [ID_CONTRATO], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[FECHA_LECTURA_SITIO] AS [FECHA_LECTURA_SITIO], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[ID_EMPLEADO_CAPTURA_LECTURA] AS [ID_EMPLEADO_CAPTURA_LECTURA], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[ID_EMPLEADO_LECTURISTA] AS [ID_EMPLEADO_LECTURISTA], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[LECTURA_MEDIDOR_m3] AS [LECTURA_MEDIDOR_m3], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[CONSUMO_m3] AS [CONSUMO_m3], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[COSTO_METRO_CUBICO] AS [COSTO_METRO_CUBICO], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[IMPORTE_CONSUMO] AS [IMPORTE_CONSUMO], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[PORCENTAJE_DESCUENTO] AS [PORCENTAJE_DESCUENTO], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[IMPORTE_CONSUMO_CON_DESCUENTO] AS [IMPORTE_CONSUMO_CON_DESCUENTO], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[IMPORTE_CONSUMO_AJUSTADO] AS [IMPORTE_CONSUMO_AJUSTADO], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[IMPORTE_CONSUMO_FINAL] AS [IMPORTE_CONSUMO_FINAL], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[ID_PAGO] AS [ID_PAGO], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[IMPORTE_PAGADO] AS [IMPORTE_PAGADO], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[IMPORTE_PENDIENTE] AS [IMPORTE_PENDIENTE], 
+      [V_UNION_PAGO_LECTURA_MEDIDOR].[IMPORTE_AFAVOR] AS [IMPORTE_AFAVOR]
+      FROM [dbo].[V_UNION_PAGO_LECTURA_MEDIDOR] AS [V_UNION_PAGO_LECTURA_MEDIDOR]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_UNION_PAGO_OTRO_CARGO" EntityType="SIFAYCOModel.Store.V_UNION_PAGO_OTRO_CARGO" store:Type="Views" store:Schema="dbo" store:Name="V_UNION_PAGO_OTRO_CARGO">
+            <DefiningQuery>SELECT 
+      [V_UNION_PAGO_OTRO_CARGO].[ID_OTRO_CARGO] AS [ID_OTRO_CARGO], 
+      [V_UNION_PAGO_OTRO_CARGO].[ID_CONTRATO] AS [ID_CONTRATO], 
+      [V_UNION_PAGO_OTRO_CARGO].[FECHA_CAPTURA] AS [FECHA_CAPTURA], 
+      [V_UNION_PAGO_OTRO_CARGO].[ID_EMPLEADO_REPORTA] AS [ID_EMPLEADO_REPORTA], 
+      [V_UNION_PAGO_OTRO_CARGO].[ID_EMPLEADO_CAPTURA] AS [ID_EMPLEADO_CAPTURA], 
+      [V_UNION_PAGO_OTRO_CARGO].[IMPORTE_OTRO_CARGO] AS [IMPORTE_OTRO_CARGO], 
+      [V_UNION_PAGO_OTRO_CARGO].[PORCENTAJE_DESCUENTO] AS [PORCENTAJE_DESCUENTO], 
+      [V_UNION_PAGO_OTRO_CARGO].[IMPORTE_OTRO_CARGO_CON_DESCUENTO] AS [IMPORTE_OTRO_CARGO_CON_DESCUENTO], 
+      [V_UNION_PAGO_OTRO_CARGO].[IMPORTE_OTRO_CARGO_AJUSTADO] AS [IMPORTE_OTRO_CARGO_AJUSTADO], 
+      [V_UNION_PAGO_OTRO_CARGO].[IMPORTE_OTRO_CARGO_FINAL] AS [IMPORTE_OTRO_CARGO_FINAL], 
+      [V_UNION_PAGO_OTRO_CARGO].[ID_PAGO] AS [ID_PAGO], 
+      [V_UNION_PAGO_OTRO_CARGO].[IMPORTE_PAGADO] AS [IMPORTE_PAGADO], 
+      [V_UNION_PAGO_OTRO_CARGO].[IMPORTE_PENDIENTE] AS [IMPORTE_PENDIENTE], 
+      [V_UNION_PAGO_OTRO_CARGO].[IMPORTE_AFAVOR] AS [IMPORTE_AFAVOR]
+      FROM [dbo].[V_UNION_PAGO_OTRO_CARGO] AS [V_UNION_PAGO_OTRO_CARGO]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_T_CONTRATOS_CT_GIROS" Association="SIFAYCOModel.Store.FK_T_CONTRATOS_CT_GIROS">
+            <End Role="CT_GIROS" EntitySet="CT_GIROS" />
+            <End Role="T_CONTRATOS" EntitySet="T_CONTRATOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_CONTRATOS_CT_TOMAS" Association="SIFAYCOModel.Store.FK_T_CONTRATOS_CT_TOMAS">
+            <End Role="CT_TOMAS" EntitySet="CT_TOMAS" />
+            <End Role="T_CONTRATOS" EntitySet="T_CONTRATOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_CONTRATOS_T_USUARIO_SERVICIO" Association="SIFAYCOModel.Store.FK_T_CONTRATOS_T_USUARIO_SERVICIO">
+            <End Role="T_USUARIO_SERVICIO" EntitySet="T_USUARIO_SERVICIO" />
+            <End Role="T_CONTRATOS" EntitySet="T_CONTRATOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DRENAJE_T_CONTRATOS" Association="SIFAYCOModel.Store.FK_T_DRENAJE_T_CONTRATOS">
+            <End Role="T_CONTRATOS" EntitySet="T_CONTRATOS" />
+            <End Role="T_DRENAJE" EntitySet="T_DRENAJE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DRENAJE_T_EMPLEADOS" Association="SIFAYCOModel.Store.FK_T_DRENAJE_T_EMPLEADOS">
+            <End Role="T_EMPLEADOS" EntitySet="T_EMPLEADOS" />
+            <End Role="T_DRENAJE" EntitySet="T_DRENAJE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_HALLAZGOS_CT_ANOMALIAS" Association="SIFAYCOModel.Store.FK_T_HALLAZGOS_CT_ANOMALIAS">
+            <End Role="CT_ANOMALIAS" EntitySet="CT_ANOMALIAS" />
+            <End Role="T_OTROS_CARGOS" EntitySet="T_OTROS_CARGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_HALLAZGOS_T_CONTRATOS" Association="SIFAYCOModel.Store.FK_T_HALLAZGOS_T_CONTRATOS">
+            <End Role="T_CONTRATOS" EntitySet="T_CONTRATOS" />
+            <End Role="T_OTROS_CARGOS" EntitySet="T_OTROS_CARGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_HALLAZGOS_T_EMPLEADOS" Association="SIFAYCOModel.Store.FK_T_HALLAZGOS_T_EMPLEADOS">
+            <End Role="T_EMPLEADOS" EntitySet="T_EMPLEADOS" />
+            <End Role="T_OTROS_CARGOS" EntitySet="T_OTROS_CARGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_HALLAZGOS_T_EMPLEADOS1" Association="SIFAYCOModel.Store.FK_T_HALLAZGOS_T_EMPLEADOS1">
+            <End Role="T_EMPLEADOS" EntitySet="T_EMPLEADOS" />
+            <End Role="T_OTROS_CARGOS" EntitySet="T_OTROS_CARGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_LECTURAS_MEDIDOR_T_CONTRATOS" Association="SIFAYCOModel.Store.FK_T_LECTURAS_MEDIDOR_T_CONTRATOS">
+            <End Role="T_CONTRATOS" EntitySet="T_CONTRATOS" />
+            <End Role="T_LECTURAS_MEDIDOR" EntitySet="T_LECTURAS_MEDIDOR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_LECTURAS_T_EMPLEADOS" Association="SIFAYCOModel.Store.FK_T_LECTURAS_T_EMPLEADOS">
+            <End Role="T_EMPLEADOS" EntitySet="T_EMPLEADOS" />
+            <End Role="T_LECTURAS_MEDIDOR" EntitySet="T_LECTURAS_MEDIDOR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_LECTURAS_T_EMPLEADOS1" Association="SIFAYCOModel.Store.FK_T_LECTURAS_T_EMPLEADOS1">
+            <End Role="T_EMPLEADOS" EntitySet="T_EMPLEADOS" />
+            <End Role="T_LECTURAS_MEDIDOR" EntitySet="T_LECTURAS_MEDIDOR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_OTROS_CARGOS_CT_TIPOS_OTROS_CARGOS" Association="SIFAYCOModel.Store.FK_T_OTROS_CARGOS_CT_TIPOS_OTROS_CARGOS">
+            <End Role="CT_TIPOS_OTROS_CARGOS" EntitySet="CT_TIPOS_OTROS_CARGOS" />
+            <End Role="T_OTROS_CARGOS" EntitySet="T_OTROS_CARGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PAGOS_CT_INSTITUCIONES_BANCARIAS" Association="SIFAYCOModel.Store.FK_T_PAGOS_CT_INSTITUCIONES_BANCARIAS">
+            <End Role="CT_INSTITUCIONES_BANCARIAS" EntitySet="CT_INSTITUCIONES_BANCARIAS" />
+            <End Role="T_PAGOS" EntitySet="T_PAGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PAGOS_CT_METODOS_DE_PAGO" Association="SIFAYCOModel.Store.FK_T_PAGOS_CT_METODOS_DE_PAGO">
+            <End Role="CT_METODOS_DE_PAGO" EntitySet="CT_METODOS_DE_PAGO" />
+            <End Role="T_PAGOS" EntitySet="T_PAGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PAGOS_T_EMPLEADOS" Association="SIFAYCOModel.Store.FK_T_PAGOS_T_EMPLEADOS">
+            <End Role="T_EMPLEADOS" EntitySet="T_EMPLEADOS" />
+            <End Role="T_PAGOS" EntitySet="T_PAGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PAGOS_T_EMPLEADOS1" Association="SIFAYCOModel.Store.FK_T_PAGOS_T_EMPLEADOS1">
+            <End Role="T_EMPLEADOS" EntitySet="T_EMPLEADOS" />
+            <End Role="T_PAGOS" EntitySet="T_PAGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_UNION_PAGO_HALLAZGOS_T_PAGOS" Association="SIFAYCOModel.Store.FK_T_UNION_PAGO_HALLAZGOS_T_PAGOS">
+            <End Role="T_PAGOS" EntitySet="T_PAGOS" />
+            <End Role="T_UNION_PAGO_OTRO_CARGO" EntitySet="T_UNION_PAGO_OTRO_CARGO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_LECTURAS_MEDIDOR" Association="SIFAYCOModel.Store.FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_LECTURAS_MEDIDOR">
+            <End Role="T_LECTURAS_MEDIDOR" EntitySet="T_LECTURAS_MEDIDOR" />
+            <End Role="T_UNION_PAGO_LECTURA_MEDIDOR" EntitySet="T_UNION_PAGO_LECTURA_MEDIDOR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_PAGOS" Association="SIFAYCOModel.Store.FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_PAGOS">
+            <End Role="T_PAGOS" EntitySet="T_PAGOS" />
+            <End Role="T_UNION_PAGO_LECTURA_MEDIDOR" EntitySet="T_UNION_PAGO_LECTURA_MEDIDOR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_UNION_PAGO_OTRO_CARGO_T_OTROS_CARGOS" Association="SIFAYCOModel.Store.FK_T_UNION_PAGO_OTRO_CARGO_T_OTROS_CARGOS">
+            <End Role="T_OTROS_CARGOS" EntitySet="T_OTROS_CARGOS" />
+            <End Role="T_UNION_PAGO_OTRO_CARGO" EntitySet="T_UNION_PAGO_OTRO_CARGO" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CT_ANOMALIAS">
+          <Key>
+            <PropertyRef Name="ID_ANOMALIA" />
+          </Key>
+          <Property Name="ID_ANOMALIA" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CLAVE" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="IMPORTE" Type="float" Nullable="false" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'SIFAYCO.dbo.CT_CAJAS' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="CT_CAJAS">
+          <Key>
+            <PropertyRef Name="ID_CAJAS" />
+            <PropertyRef Name="CLAVE" />
+            <PropertyRef Name="DESCRIPCION" />
+          </Key>
+          <Property Name="ID_CAJAS" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CLAVE" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="CT_GIROS">
+          <Key>
+            <PropertyRef Name="ID_GIRO" />
+          </Key>
+          <Property Name="ID_GIRO" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CLAVE" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="CT_INSTITUCIONES_BANCARIAS">
+          <Key>
+            <PropertyRef Name="ID_INSTITUCION_BANCARIA" />
+          </Key>
+          <Property Name="ID_INSTITUCION_BANCARIA" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CLAVE" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="HABILITADO" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CT_METODOS_DE_PAGO">
+          <Key>
+            <PropertyRef Name="ID_METODO_PAGO" />
+          </Key>
+          <Property Name="ID_METODO_PAGO" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CLAVE" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="HABILITADO" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CT_RANGO_TARIFA">
+          <Key>
+            <PropertyRef Name="ID_RANGO_TARIFA" />
+          </Key>
+          <Property Name="ID_RANGO_TARIFA" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RANGO" Type="int" Nullable="false" />
+          <Property Name="LIMITE_SUPERIOR" Type="bigint" Nullable="false" />
+          <Property Name="COSTO_METRO_CUBICO" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CT_STATUS_SERVICIO">
+          <Key>
+            <PropertyRef Name="ID_STATUS_SERVICIO" />
+          </Key>
+          <Property Name="ID_STATUS_SERVICIO" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'SIFAYCO.dbo.CT_TARIFAS' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="CT_TARIFAS">
+          <Key>
+            <PropertyRef Name="ID_TARIFA" />
+            <PropertyRef Name="USO" />
+            <PropertyRef Name="CLASE" />
+            <PropertyRef Name="SERVICIO" />
+            <PropertyRef Name="RANGO" />
+            <PropertyRef Name="IMPORTE_CONSUMO_m3" />
+            <PropertyRef Name="CONSUMO_m3" />
+            <PropertyRef Name="IMPORTE" />
+            <PropertyRef Name="IMPORTE_DRENAJE" />
+          </Key>
+          <Property Name="ID_TARIFA" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="USO" Type="bigint" Nullable="false" />
+          <Property Name="CLASE" Type="bigint" Nullable="false" />
+          <Property Name="SERVICIO" Type="bigint" Nullable="false" />
+          <Property Name="RANGO" Type="bigint" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO_m3" Type="float" Nullable="false" />
+          <Property Name="CONSUMO_m3" Type="float" Nullable="false" />
+          <Property Name="IMPORTE" Type="float" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="IMPORTE_DRENAJE" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CT_TIPOS_OTROS_CARGOS">
+          <Key>
+            <PropertyRef Name="ID_TIPO_OTRO_CARGO" />
+          </Key>
+          <Property Name="ID_TIPO_OTRO_CARGO" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="CT_TOMAS">
+          <Key>
+            <PropertyRef Name="ID_TIPO_TOMA" />
+          </Key>
+          <Property Name="ID_TIPO_TOMA" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GRUPO" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="SGRUPO" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="SSGRUPO" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="UNIDAD" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="CANTIDAD" Type="float" Nullable="false" />
+          <Property Name="PRECIO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CT_USO">
+          <Key>
+            <PropertyRef Name="USO" />
+            <PropertyRef Name="CLASE" />
+            <PropertyRef Name="SERVICIO" />
+          </Key>
+          <Property Name="ID_CONTROL_USO" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="USO" Type="bigint" Nullable="false" />
+          <Property Name="CLASE" Type="bigint" Nullable="false" />
+          <Property Name="SERVICIO" Type="bigint" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="T_CONFIGURACION_GENERAL">
+          <Key>
+            <PropertyRef Name="ID_PROPIEDAD" />
+          </Key>
+          <Property Name="ID_PROPIEDAD" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DESCRIPCION_DE_PROPIEDAD" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="NOMBRE_CLAVE_DE_PROPIEDAD" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="VALOR" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="T_CONTRATOS">
+          <Key>
+            <PropertyRef Name="ID_CONTRATO" />
+          </Key>
+          <Property Name="ID_CONTRATO" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_USUARIO_SERVICIO" Type="bigint" Nullable="false" />
+          <Property Name="FECHA_SOLICITUD" Type="datetime" />
+          <Property Name="FECHA_INSPECCION" Type="datetime" />
+          <Property Name="FECHA_CONTRATO" Type="datetime" />
+          <Property Name="NUMERO_CONTRATO" Type="bigint" />
+          <Property Name="CALLE" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="COLONIA" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="CODIGO_POSTAL" Type="int" />
+          <Property Name="SECTOR" Type="int" />
+          <Property Name="MANZANA" Type="nchar" MaxLength="10" />
+          <Property Name="LOTE" Type="int" />
+          <Property Name="RUTA" Type="int" />
+          <Property Name="PROGRESIVO" Type="nchar" MaxLength="10" />
+          <Property Name="REFERENCIA" Type="bigint" />
+          <Property Name="USO" Type="int" />
+          <Property Name="CLASE" Type="int" />
+          <Property Name="SERVICIO" Type="int" />
+          <Property Name="NUMERO_HABITANTES" Type="int" />
+          <Property Name="ID_GIRO" Type="bigint" Nullable="false" />
+          <Property Name="ID_TIPO_DE_TOMA" Type="bigint" Nullable="false" />
+          <Property Name="COSTO_TOMA" Type="float" />
+          <Property Name="MEDIDOR_NUMERO" Type="bigint" />
+          <Property Name="MEDIDOR_DIAMETRO_pulg" Type="float" />
+          <Property Name="MEDIDOR_MARCA" Type="varchar" MaxLength="50" />
+          <Property Name="MEDIDOR_MODELO" Type="varchar" MaxLength="50" />
+          <Property Name="MEDIDOR_INDICADORES" Type="int" />
+          <Property Name="ID_STATUS_SERVICIO" Type="bigint" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="datetime" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_DRENAJE">
+          <Key>
+            <PropertyRef Name="ID_DRENAJE" />
+          </Key>
+          <Property Name="ID_DRENAJE" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_CONTRATO" Type="bigint" Nullable="false" />
+          <Property Name="ID_EMPLEADO_CAPTURA" Type="bigint" Nullable="false" />
+          <Property Name="FECHA_CAPTURA" Type="date" Nullable="false" />
+          <Property Name="ES_TARIFA" Type="int" Nullable="false" />
+          <Property Name="IMPORTE_DRENAJE" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_DRENAJE_AJUSTADO" Type="float" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="float" Nullable="false" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="datetime" Nullable="false" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_EMPLEADOS">
+          <Key>
+            <PropertyRef Name="ID_EMPLEADO" />
+          </Key>
+          <Property Name="ID_EMPLEADO" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE_COMPLETO" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="T_FRECUENCIA">
+          <Key>
+            <PropertyRef Name="ID_FRECUENCIA" />
+          </Key>
+          <Property Name="ID_FRECUENCIA" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DIAS_NATURALES" Type="float" Nullable="false" />
+          <Property Name="HABILITADO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_LECTURAS_MEDIDOR">
+          <Key>
+            <PropertyRef Name="ID_LECTURA_MEDIDOR" />
+          </Key>
+          <Property Name="ID_LECTURA_MEDIDOR" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_CONTRATO" Type="bigint" Nullable="false" />
+          <Property Name="FECHA_LECTURA_SITIO" Type="date" Nullable="false" />
+          <Property Name="ID_EMPLEADO_CAPTURA" Type="bigint" Nullable="false" />
+          <Property Name="ID_EMPLEADO_LECTURISTA" Type="bigint" Nullable="false" />
+          <Property Name="ES_TARIFA" Type="int" Nullable="false" />
+          <Property Name="LECTURA_MEDIDOR_m3" Type="float" Nullable="false" />
+          <Property Name="CONSUMO_m3" Type="float" Nullable="false" />
+          <Property Name="COSTO_METRO_CUBICO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO" Type="float" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="IMPORTE_CONSUMO_AJUSTADO" Type="float" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="float" Nullable="false" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="datetime" Nullable="false" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_OTROS_CARGOS">
+          <Key>
+            <PropertyRef Name="ID_OTRO_CARGO" />
+          </Key>
+          <Property Name="ID_OTRO_CARGO" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_TIPO_OTRO_CARGO" Type="bigint" Nullable="false" />
+          <Property Name="ID_EMPLEADO_CAPTURA" Type="bigint" Nullable="false" />
+          <Property Name="ID_EMPLEADO_REPORTA" Type="bigint" Nullable="false" />
+          <Property Name="ID_CONTRATO" Type="bigint" Nullable="false" />
+          <Property Name="ID_ANOMALIA" Type="bigint" Nullable="false" />
+          <Property Name="FECHA_CAPTURA" Type="date" Nullable="false" />
+          <Property Name="IMPORTE_OTRO_CARGO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_OTRO_CARGO_AJUSTADO" Type="float" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="float" Nullable="false" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="datetime" Nullable="false" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_PAGOS">
+          <Key>
+            <PropertyRef Name="ID_PAGO" />
+          </Key>
+          <Property Name="ID_PAGO" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_EMPLEADO_CAJA" Type="bigint" Nullable="false" />
+          <Property Name="FECHA_PAGO" Type="date" Nullable="false" />
+          <Property Name="ID_EMPLEADO_AUTORIZA_DESCUENTO" Type="bigint" Nullable="false" />
+          <Property Name="ID_METODO_PAGO" Type="bigint" Nullable="false" />
+          <Property Name="ID_INSTITUCION_BANCARIA" Type="bigint" Nullable="false" />
+          <Property Name="NUMERO_CUENTA" Type="nvarchar" MaxLength="50" />
+          <Property Name="FOLIO_AUTORIZACION" Type="nvarchar" MaxLength="50" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="datetime" Nullable="false" />
+          <Property Name="FACHA_MODIFICACION_REGISTRO" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_UNION_PAGO_LECTURA_MEDIDOR">
+          <Key>
+            <PropertyRef Name="ID_PAGO" />
+            <PropertyRef Name="ID_LECTURA_MEDIDOR" />
+          </Key>
+          <Property Name="ID_UNION_PAGO_LECTURA_MEDIDOR" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_PAGO" Type="bigint" Nullable="false" />
+          <Property Name="ID_LECTURA_MEDIDOR" Type="bigint" Nullable="false" />
+          <Property Name="IMPORTE_PAGADO" Type="float" Nullable="false" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="datetime" Nullable="false" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_UNION_PAGO_OTRO_CARGO">
+          <Key>
+            <PropertyRef Name="ID_PAGO" />
+            <PropertyRef Name="ID_OTRO_CARGO" />
+          </Key>
+          <Property Name="ID_UNION_PAGO_OTRO_CARGO" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_PAGO" Type="bigint" Nullable="false" />
+          <Property Name="ID_OTRO_CARGO" Type="bigint" Nullable="false" />
+          <Property Name="IMPORTE_PAGADO" Type="float" Nullable="false" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="datetime" Nullable="false" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_USUARIO_SERVICIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO_SERVICIO" />
+          </Key>
+          <Property Name="ID_USUARIO_SERVICIO" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE_USUARIO" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="TELEFONO" Type="nchar" MaxLength="20" />
+          <Property Name="CORREO_ELECTRONICO" Type="nchar" MaxLength="100" />
+          <Property Name="CALLE" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="NUMERO_EXTERIOR" Type="int" />
+          <Property Name="NUMERO_INTERIOR" Type="int" />
+          <Property Name="COLONIA" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="CODIGO_POSTAL" Type="int" Nullable="false" />
+          <Property Name="REFERENCIA" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'SIFAYCO.dbo.V_DRENAJE' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_DRENAJE">
+          <Key>
+            <PropertyRef Name="ID_DRENAJE" />
+            <PropertyRef Name="ID_EMPLEADO_CAPTURA" />
+            <PropertyRef Name="ID_CONTRATO" />
+            <PropertyRef Name="FECHA_CAPTURA" />
+            <PropertyRef Name="IMPORTE_DRENAJE" />
+            <PropertyRef Name="PORCENTAJE_DESCUENTO" />
+            <PropertyRef Name="IMPORTE_DRENAJE_AJUSTADO" />
+            <PropertyRef Name="FECHA_ALTA_REGISTRO" />
+            <PropertyRef Name="FECHA_MODIFICACION_REGISTRO" />
+          </Key>
+          <Property Name="ID_DRENAJE" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_EMPLEADO_CAPTURA" Type="bigint" Nullable="false" />
+          <Property Name="ID_CONTRATO" Type="bigint" Nullable="false" />
+          <Property Name="FECHA_CAPTURA" Type="date" Nullable="false" />
+          <Property Name="IMPORTE_DRENAJE" Type="float" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_ANOMALIA_CON_DESCUENTO" Type="float" />
+          <Property Name="IMPORTE_DRENAJE_AJUSTADO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_DRENAJE_FINAL" Type="float" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="datetime" Nullable="false" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'SIFAYCO.dbo.V_LECTURAS_MEDIDOR' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_LECTURAS_MEDIDOR">
+          <Key>
+            <PropertyRef Name="ID_LECTURA_MEDIDOR" />
+            <PropertyRef Name="ID_CONTRATO" />
+            <PropertyRef Name="FECHA_LECTURA_SITIO" />
+            <PropertyRef Name="ID_EMPLEADO_CAPTURA" />
+            <PropertyRef Name="ID_EMPLEADO_LECTURISTA" />
+            <PropertyRef Name="ES_TARIFA" />
+            <PropertyRef Name="LECTURA_MEDIDOR_m3" />
+            <PropertyRef Name="CONSUMO_m3" />
+            <PropertyRef Name="COSTO_METRO_CUBICO" />
+            <PropertyRef Name="IMPORTE_CONSUMO" />
+            <PropertyRef Name="PORCENTAJE_DESCUENTO" />
+            <PropertyRef Name="IMPORTE_CONSUMO_AJUSTADO" />
+            <PropertyRef Name="FECHA_ALTA_REGISTRO" />
+            <PropertyRef Name="FECHA_MODIFICACION_REGISTRO" />
+          </Key>
+          <Property Name="ID_LECTURA_MEDIDOR" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_CONTRATO" Type="bigint" Nullable="false" />
+          <Property Name="FECHA_LECTURA_SITIO" Type="date" Nullable="false" />
+          <Property Name="ID_EMPLEADO_CAPTURA" Type="bigint" Nullable="false" />
+          <Property Name="ID_EMPLEADO_LECTURISTA" Type="bigint" Nullable="false" />
+          <Property Name="ES_TARIFA" Type="int" Nullable="false" />
+          <Property Name="LECTURA_MEDIDOR_m3" Type="float" Nullable="false" />
+          <Property Name="CONSUMO_m3" Type="float" Nullable="false" />
+          <Property Name="COSTO_METRO_CUBICO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO" Type="float" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO_CON_DESCUENTO" Type="float" />
+          <Property Name="IMPORTE_CONSUMO_AJUSTADO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO_FINAL" Type="float" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="datetime" Nullable="false" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'SIFAYCO.dbo.V_OTROS_CARGOS' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_OTROS_CARGOS">
+          <Key>
+            <PropertyRef Name="ID_OTRO_CARGO" />
+            <PropertyRef Name="ID_EMPLEADO_CAPTURA" />
+            <PropertyRef Name="ID_EMPLEADO_REPORTA" />
+            <PropertyRef Name="ID_CONTRATO" />
+            <PropertyRef Name="ID_ANOMALIA" />
+            <PropertyRef Name="FECHA_CAPTURA" />
+            <PropertyRef Name="IMPORTE_OTRO_CARGO" />
+            <PropertyRef Name="PORCENTAJE_DESCUENTO" />
+            <PropertyRef Name="IMPORTE_OTRO_CARGO_AJUSTADO" />
+            <PropertyRef Name="FECHA_ALTA_REGISTRO" />
+            <PropertyRef Name="FECHA_MODIFICACION_REGISTRO" />
+          </Key>
+          <Property Name="ID_OTRO_CARGO" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_EMPLEADO_CAPTURA" Type="bigint" Nullable="false" />
+          <Property Name="ID_EMPLEADO_REPORTA" Type="bigint" Nullable="false" />
+          <Property Name="ID_CONTRATO" Type="bigint" Nullable="false" />
+          <Property Name="ID_ANOMALIA" Type="bigint" Nullable="false" />
+          <Property Name="FECHA_CAPTURA" Type="date" Nullable="false" />
+          <Property Name="IMPORTE_OTRO_CARGO" Type="float" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_OTRO_CARGO_CON_DESCUENTO" Type="float" />
+          <Property Name="IMPORTE_OTRO_CARGO_AJUSTADO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_OTRO_CARGO_FINAL" Type="float" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="datetime" Nullable="false" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="datetime" Nullable="false" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'SIFAYCO.dbo.V_TARIFAS' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_TARIFAS">
+          <Key>
+            <PropertyRef Name="DESCRIPCION" />
+            <PropertyRef Name="CLASE" />
+            <PropertyRef Name="SERVICIO" />
+            <PropertyRef Name="RANGO" />
+            <PropertyRef Name="IMPORTE_CONSUMO_m3" />
+            <PropertyRef Name="CONSUMO_m3" />
+            <PropertyRef Name="IMPORTE" />
+          </Key>
+          <Property Name="DESCRIPCION" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="CLASE" Type="bigint" Nullable="false" />
+          <Property Name="SERVICIO" Type="bigint" Nullable="false" />
+          <Property Name="RANGO" Type="bigint" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO_m3" Type="float" Nullable="false" />
+          <Property Name="CONSUMO_m3" Type="float" Nullable="false" />
+          <Property Name="IMPORTE" Type="float" Nullable="false" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'SIFAYCO.dbo.V_UNION_PAGO_LECTURA_MEDIDOR' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_UNION_PAGO_LECTURA_MEDIDOR">
+          <Key>
+            <PropertyRef Name="ID_LECTURA_MEDIDOR" />
+            <PropertyRef Name="ID_CONTRATO" />
+            <PropertyRef Name="FECHA_LECTURA_SITIO" />
+            <PropertyRef Name="ID_EMPLEADO_CAPTURA_LECTURA" />
+            <PropertyRef Name="ID_EMPLEADO_LECTURISTA" />
+            <PropertyRef Name="LECTURA_MEDIDOR_m3" />
+            <PropertyRef Name="CONSUMO_m3" />
+            <PropertyRef Name="COSTO_METRO_CUBICO" />
+            <PropertyRef Name="IMPORTE_CONSUMO" />
+            <PropertyRef Name="PORCENTAJE_DESCUENTO" />
+            <PropertyRef Name="IMPORTE_CONSUMO_AJUSTADO" />
+          </Key>
+          <Property Name="ID_LECTURA_MEDIDOR" Type="bigint" Nullable="false" />
+          <Property Name="ID_CONTRATO" Type="bigint" Nullable="false" />
+          <Property Name="FECHA_LECTURA_SITIO" Type="date" Nullable="false" />
+          <Property Name="ID_EMPLEADO_CAPTURA_LECTURA" Type="bigint" Nullable="false" />
+          <Property Name="ID_EMPLEADO_LECTURISTA" Type="bigint" Nullable="false" />
+          <Property Name="LECTURA_MEDIDOR_m3" Type="float" Nullable="false" />
+          <Property Name="CONSUMO_m3" Type="float" Nullable="false" />
+          <Property Name="COSTO_METRO_CUBICO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO" Type="float" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO_CON_DESCUENTO" Type="float" />
+          <Property Name="IMPORTE_CONSUMO_AJUSTADO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO_FINAL" Type="float" />
+          <Property Name="ID_PAGO" Type="bigint" />
+          <Property Name="IMPORTE_PAGADO" Type="float" />
+          <Property Name="IMPORTE_PENDIENTE" Type="float" />
+          <Property Name="IMPORTE_AFAVOR" Type="float" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'SIFAYCO.dbo.V_UNION_PAGO_OTRO_CARGO' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="V_UNION_PAGO_OTRO_CARGO">
+          <Key>
+            <PropertyRef Name="ID_OTRO_CARGO" />
+            <PropertyRef Name="ID_CONTRATO" />
+            <PropertyRef Name="FECHA_CAPTURA" />
+            <PropertyRef Name="ID_EMPLEADO_REPORTA" />
+            <PropertyRef Name="ID_EMPLEADO_CAPTURA" />
+            <PropertyRef Name="IMPORTE_OTRO_CARGO" />
+            <PropertyRef Name="PORCENTAJE_DESCUENTO" />
+            <PropertyRef Name="IMPORTE_OTRO_CARGO_AJUSTADO" />
+          </Key>
+          <Property Name="ID_OTRO_CARGO" Type="bigint" Nullable="false" />
+          <Property Name="ID_CONTRATO" Type="bigint" Nullable="false" />
+          <Property Name="FECHA_CAPTURA" Type="date" Nullable="false" />
+          <Property Name="ID_EMPLEADO_REPORTA" Type="bigint" Nullable="false" />
+          <Property Name="ID_EMPLEADO_CAPTURA" Type="bigint" Nullable="false" />
+          <Property Name="IMPORTE_OTRO_CARGO" Type="float" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_OTRO_CARGO_CON_DESCUENTO" Type="float" />
+          <Property Name="IMPORTE_OTRO_CARGO_AJUSTADO" Type="float" Nullable="false" />
+          <Property Name="IMPORTE_OTRO_CARGO_FINAL" Type="float" />
+          <Property Name="ID_PAGO" Type="bigint" />
+          <Property Name="IMPORTE_PAGADO" Type="float" />
+          <Property Name="IMPORTE_PENDIENTE" Type="float" />
+          <Property Name="IMPORTE_AFAVOR" Type="float" />
+        </EntityType>
+        <Association Name="FK_T_CONTRATOS_CT_GIROS">
+          <End Role="CT_GIROS" Type="SIFAYCOModel.Store.CT_GIROS" Multiplicity="1" />
+          <End Role="T_CONTRATOS" Type="SIFAYCOModel.Store.T_CONTRATOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CT_GIROS">
+              <PropertyRef Name="ID_GIRO" />
+            </Principal>
+            <Dependent Role="T_CONTRATOS">
+              <PropertyRef Name="ID_GIRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_CONTRATOS_CT_TOMAS">
+          <End Role="CT_TOMAS" Type="SIFAYCOModel.Store.CT_TOMAS" Multiplicity="1" />
+          <End Role="T_CONTRATOS" Type="SIFAYCOModel.Store.T_CONTRATOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CT_TOMAS">
+              <PropertyRef Name="ID_TIPO_TOMA" />
+            </Principal>
+            <Dependent Role="T_CONTRATOS">
+              <PropertyRef Name="ID_TIPO_DE_TOMA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_CONTRATOS_T_USUARIO_SERVICIO">
+          <End Role="T_USUARIO_SERVICIO" Type="SIFAYCOModel.Store.T_USUARIO_SERVICIO" Multiplicity="1" />
+          <End Role="T_CONTRATOS" Type="SIFAYCOModel.Store.T_CONTRATOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_USUARIO_SERVICIO">
+              <PropertyRef Name="ID_USUARIO_SERVICIO" />
+            </Principal>
+            <Dependent Role="T_CONTRATOS">
+              <PropertyRef Name="ID_USUARIO_SERVICIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DRENAJE_T_CONTRATOS">
+          <End Role="T_CONTRATOS" Type="SIFAYCOModel.Store.T_CONTRATOS" Multiplicity="1" />
+          <End Role="T_DRENAJE" Type="SIFAYCOModel.Store.T_DRENAJE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_CONTRATOS">
+              <PropertyRef Name="ID_CONTRATO" />
+            </Principal>
+            <Dependent Role="T_DRENAJE">
+              <PropertyRef Name="ID_CONTRATO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DRENAJE_T_EMPLEADOS">
+          <End Role="T_EMPLEADOS" Type="SIFAYCOModel.Store.T_EMPLEADOS" Multiplicity="1" />
+          <End Role="T_DRENAJE" Type="SIFAYCOModel.Store.T_DRENAJE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_EMPLEADOS">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Principal>
+            <Dependent Role="T_DRENAJE">
+              <PropertyRef Name="ID_EMPLEADO_CAPTURA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_HALLAZGOS_CT_ANOMALIAS">
+          <End Role="CT_ANOMALIAS" Type="SIFAYCOModel.Store.CT_ANOMALIAS" Multiplicity="1" />
+          <End Role="T_OTROS_CARGOS" Type="SIFAYCOModel.Store.T_OTROS_CARGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CT_ANOMALIAS">
+              <PropertyRef Name="ID_ANOMALIA" />
+            </Principal>
+            <Dependent Role="T_OTROS_CARGOS">
+              <PropertyRef Name="ID_ANOMALIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_HALLAZGOS_T_CONTRATOS">
+          <End Role="T_CONTRATOS" Type="SIFAYCOModel.Store.T_CONTRATOS" Multiplicity="1" />
+          <End Role="T_OTROS_CARGOS" Type="SIFAYCOModel.Store.T_OTROS_CARGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_CONTRATOS">
+              <PropertyRef Name="ID_CONTRATO" />
+            </Principal>
+            <Dependent Role="T_OTROS_CARGOS">
+              <PropertyRef Name="ID_CONTRATO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_HALLAZGOS_T_EMPLEADOS">
+          <End Role="T_EMPLEADOS" Type="SIFAYCOModel.Store.T_EMPLEADOS" Multiplicity="1" />
+          <End Role="T_OTROS_CARGOS" Type="SIFAYCOModel.Store.T_OTROS_CARGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_EMPLEADOS">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Principal>
+            <Dependent Role="T_OTROS_CARGOS">
+              <PropertyRef Name="ID_EMPLEADO_CAPTURA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_HALLAZGOS_T_EMPLEADOS1">
+          <End Role="T_EMPLEADOS" Type="SIFAYCOModel.Store.T_EMPLEADOS" Multiplicity="1" />
+          <End Role="T_OTROS_CARGOS" Type="SIFAYCOModel.Store.T_OTROS_CARGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_EMPLEADOS">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Principal>
+            <Dependent Role="T_OTROS_CARGOS">
+              <PropertyRef Name="ID_EMPLEADO_REPORTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_LECTURAS_MEDIDOR_T_CONTRATOS">
+          <End Role="T_CONTRATOS" Type="SIFAYCOModel.Store.T_CONTRATOS" Multiplicity="1" />
+          <End Role="T_LECTURAS_MEDIDOR" Type="SIFAYCOModel.Store.T_LECTURAS_MEDIDOR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_CONTRATOS">
+              <PropertyRef Name="ID_CONTRATO" />
+            </Principal>
+            <Dependent Role="T_LECTURAS_MEDIDOR">
+              <PropertyRef Name="ID_CONTRATO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_LECTURAS_T_EMPLEADOS">
+          <End Role="T_EMPLEADOS" Type="SIFAYCOModel.Store.T_EMPLEADOS" Multiplicity="1" />
+          <End Role="T_LECTURAS_MEDIDOR" Type="SIFAYCOModel.Store.T_LECTURAS_MEDIDOR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_EMPLEADOS">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Principal>
+            <Dependent Role="T_LECTURAS_MEDIDOR">
+              <PropertyRef Name="ID_EMPLEADO_LECTURISTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_LECTURAS_T_EMPLEADOS1">
+          <End Role="T_EMPLEADOS" Type="SIFAYCOModel.Store.T_EMPLEADOS" Multiplicity="1" />
+          <End Role="T_LECTURAS_MEDIDOR" Type="SIFAYCOModel.Store.T_LECTURAS_MEDIDOR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_EMPLEADOS">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Principal>
+            <Dependent Role="T_LECTURAS_MEDIDOR">
+              <PropertyRef Name="ID_EMPLEADO_CAPTURA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_OTROS_CARGOS_CT_TIPOS_OTROS_CARGOS">
+          <End Role="CT_TIPOS_OTROS_CARGOS" Type="SIFAYCOModel.Store.CT_TIPOS_OTROS_CARGOS" Multiplicity="1" />
+          <End Role="T_OTROS_CARGOS" Type="SIFAYCOModel.Store.T_OTROS_CARGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CT_TIPOS_OTROS_CARGOS">
+              <PropertyRef Name="ID_TIPO_OTRO_CARGO" />
+            </Principal>
+            <Dependent Role="T_OTROS_CARGOS">
+              <PropertyRef Name="ID_TIPO_OTRO_CARGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PAGOS_CT_INSTITUCIONES_BANCARIAS">
+          <End Role="CT_INSTITUCIONES_BANCARIAS" Type="SIFAYCOModel.Store.CT_INSTITUCIONES_BANCARIAS" Multiplicity="1" />
+          <End Role="T_PAGOS" Type="SIFAYCOModel.Store.T_PAGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CT_INSTITUCIONES_BANCARIAS">
+              <PropertyRef Name="ID_INSTITUCION_BANCARIA" />
+            </Principal>
+            <Dependent Role="T_PAGOS">
+              <PropertyRef Name="ID_INSTITUCION_BANCARIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PAGOS_CT_METODOS_DE_PAGO">
+          <End Role="CT_METODOS_DE_PAGO" Type="SIFAYCOModel.Store.CT_METODOS_DE_PAGO" Multiplicity="1" />
+          <End Role="T_PAGOS" Type="SIFAYCOModel.Store.T_PAGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CT_METODOS_DE_PAGO">
+              <PropertyRef Name="ID_METODO_PAGO" />
+            </Principal>
+            <Dependent Role="T_PAGOS">
+              <PropertyRef Name="ID_METODO_PAGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PAGOS_T_EMPLEADOS">
+          <End Role="T_EMPLEADOS" Type="SIFAYCOModel.Store.T_EMPLEADOS" Multiplicity="1" />
+          <End Role="T_PAGOS" Type="SIFAYCOModel.Store.T_PAGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_EMPLEADOS">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Principal>
+            <Dependent Role="T_PAGOS">
+              <PropertyRef Name="ID_EMPLEADO_CAJA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PAGOS_T_EMPLEADOS1">
+          <End Role="T_EMPLEADOS" Type="SIFAYCOModel.Store.T_EMPLEADOS" Multiplicity="1" />
+          <End Role="T_PAGOS" Type="SIFAYCOModel.Store.T_PAGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_EMPLEADOS">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Principal>
+            <Dependent Role="T_PAGOS">
+              <PropertyRef Name="ID_EMPLEADO_AUTORIZA_DESCUENTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_UNION_PAGO_HALLAZGOS_T_PAGOS">
+          <End Role="T_PAGOS" Type="SIFAYCOModel.Store.T_PAGOS" Multiplicity="1" />
+          <End Role="T_UNION_PAGO_OTRO_CARGO" Type="SIFAYCOModel.Store.T_UNION_PAGO_OTRO_CARGO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_PAGOS">
+              <PropertyRef Name="ID_PAGO" />
+            </Principal>
+            <Dependent Role="T_UNION_PAGO_OTRO_CARGO">
+              <PropertyRef Name="ID_PAGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_LECTURAS_MEDIDOR">
+          <End Role="T_LECTURAS_MEDIDOR" Type="SIFAYCOModel.Store.T_LECTURAS_MEDIDOR" Multiplicity="1" />
+          <End Role="T_UNION_PAGO_LECTURA_MEDIDOR" Type="SIFAYCOModel.Store.T_UNION_PAGO_LECTURA_MEDIDOR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_LECTURAS_MEDIDOR">
+              <PropertyRef Name="ID_LECTURA_MEDIDOR" />
+            </Principal>
+            <Dependent Role="T_UNION_PAGO_LECTURA_MEDIDOR">
+              <PropertyRef Name="ID_LECTURA_MEDIDOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_PAGOS">
+          <End Role="T_PAGOS" Type="SIFAYCOModel.Store.T_PAGOS" Multiplicity="1" />
+          <End Role="T_UNION_PAGO_LECTURA_MEDIDOR" Type="SIFAYCOModel.Store.T_UNION_PAGO_LECTURA_MEDIDOR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_PAGOS">
+              <PropertyRef Name="ID_PAGO" />
+            </Principal>
+            <Dependent Role="T_UNION_PAGO_LECTURA_MEDIDOR">
+              <PropertyRef Name="ID_PAGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_UNION_PAGO_OTRO_CARGO_T_OTROS_CARGOS">
+          <End Role="T_OTROS_CARGOS" Type="SIFAYCOModel.Store.T_OTROS_CARGOS" Multiplicity="1" />
+          <End Role="T_UNION_PAGO_OTRO_CARGO" Type="SIFAYCOModel.Store.T_UNION_PAGO_OTRO_CARGO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_OTROS_CARGOS">
+              <PropertyRef Name="ID_OTRO_CARGO" />
+            </Principal>
+            <Dependent Role="T_UNION_PAGO_OTRO_CARGO">
+              <PropertyRef Name="ID_OTRO_CARGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6013: La tabla o vista 'SIFAYCO.dbo.V_LECTURAS_MEDIDOR_CORTE_ANTERIOR_PERIODO_ACTUAL' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+      
+      <EntityType Name="V_LECTURAS_MEDIDOR_CORTE_ANTERIOR_PERIODO_ACTUAL">
+        <Property Name="ID_CONTRATO" Type="bigint" />
+        <Property Name="FECHA_LECTURA_SITIO" Type="datetime" />
+        <Property Name="CONSUMO_m3" Type="float" />
+        <Property Name="PORCENTAJE_DESCUENTO" Type="float" />
+        <Property Name="IMPORTE_CONSUMO_FINAL" Type="float" />
+        <Property Name="IMPORTE_PENDIENTE" Type="float" />
+        <Property Name="IMPORTE_AFAVOR" Type="float" />
+        <Property Name="FECHA_INICIO_CORTE" Type="date" />
+        <Property Name="FECHA_FIN_CORTE" Type="date" />
+      </EntityType>
+      Se encontraron errores durante la generación:
+      advertencia 6013: La tabla o vista 'SIFAYCO.dbo.V_LECTURAS_MEDIDOR_CORTE_PERIODO_ACTUAL' no tiene una clave principal definida y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+      
+      <EntityType Name="V_LECTURAS_MEDIDOR_CORTE_PERIODO_ACTUAL">
+        <Property Name="ID_CONTRATO" Type="bigint" />
+        <Property Name="FECHA_LECTURA_SITIO" Type="datetime" />
+        <Property Name="CONSUMO_m3" Type="float" />
+        <Property Name="PORCENTAJE_DESCUENTO" Type="float" />
+        <Property Name="IMPORTE_CONSUMO_FINAL" Type="float" />
+        <Property Name="IMPORTE_PENDIENTE" Type="float" />
+        <Property Name="IMPORTE_AFAVOR" Type="float" />
+        <Property Name="FECHA_INICIO_CORTE" Type="date" />
+        <Property Name="FECHA_FIN_CORTE" Type="date" />
+      </EntityType>-->
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SIFAYCOModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SIFAYCOEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="CT_ANOMALIAS" EntityType="SIFAYCOModel.CT_ANOMALIAS" />
+          <EntitySet Name="CT_CAJAS" EntityType="SIFAYCOModel.CT_CAJAS" />
+          <EntitySet Name="CT_GIROS" EntityType="SIFAYCOModel.CT_GIROS" />
+          <EntitySet Name="CT_INSTITUCIONES_BANCARIAS" EntityType="SIFAYCOModel.CT_INSTITUCIONES_BANCARIAS" />
+          <EntitySet Name="CT_METODOS_DE_PAGO" EntityType="SIFAYCOModel.CT_METODOS_DE_PAGO" />
+          <EntitySet Name="CT_RANGO_TARIFA" EntityType="SIFAYCOModel.CT_RANGO_TARIFA" />
+          <EntitySet Name="CT_STATUS_SERVICIO" EntityType="SIFAYCOModel.CT_STATUS_SERVICIO" />
+          <EntitySet Name="CT_TARIFAS" EntityType="SIFAYCOModel.CT_TARIFAS" />
+          <EntitySet Name="CT_TIPOS_OTROS_CARGOS" EntityType="SIFAYCOModel.CT_TIPOS_OTROS_CARGOS" />
+          <EntitySet Name="CT_TOMAS" EntityType="SIFAYCOModel.CT_TOMAS" />
+          <EntitySet Name="CT_USO" EntityType="SIFAYCOModel.CT_USO" />
+          <EntitySet Name="sysdiagrams" EntityType="SIFAYCOModel.sysdiagrams" />
+          <EntitySet Name="T_CONFIGURACION_GENERAL" EntityType="SIFAYCOModel.T_CONFIGURACION_GENERAL" />
+          <EntitySet Name="T_CONTRATOS" EntityType="SIFAYCOModel.T_CONTRATOS" />
+          <EntitySet Name="T_DRENAJE" EntityType="SIFAYCOModel.T_DRENAJE" />
+          <EntitySet Name="T_EMPLEADOS" EntityType="SIFAYCOModel.T_EMPLEADOS" />
+          <EntitySet Name="T_FRECUENCIA" EntityType="SIFAYCOModel.T_FRECUENCIA" />
+          <EntitySet Name="T_LECTURAS_MEDIDOR" EntityType="SIFAYCOModel.T_LECTURAS_MEDIDOR" />
+          <EntitySet Name="T_OTROS_CARGOS" EntityType="SIFAYCOModel.T_OTROS_CARGOS" />
+          <EntitySet Name="T_PAGOS" EntityType="SIFAYCOModel.T_PAGOS" />
+          <EntitySet Name="T_UNION_PAGO_LECTURA_MEDIDOR" EntityType="SIFAYCOModel.T_UNION_PAGO_LECTURA_MEDIDOR" />
+          <EntitySet Name="T_UNION_PAGO_OTRO_CARGO" EntityType="SIFAYCOModel.T_UNION_PAGO_OTRO_CARGO" />
+          <EntitySet Name="T_USUARIO_SERVICIO" EntityType="SIFAYCOModel.T_USUARIO_SERVICIO" />
+          <EntitySet Name="V_DRENAJE" EntityType="SIFAYCOModel.V_DRENAJE" />
+          <EntitySet Name="V_LECTURAS_MEDIDOR" EntityType="SIFAYCOModel.V_LECTURAS_MEDIDOR" />
+          <EntitySet Name="V_OTROS_CARGOS" EntityType="SIFAYCOModel.V_OTROS_CARGOS" />
+          <EntitySet Name="V_TARIFAS" EntityType="SIFAYCOModel.V_TARIFAS" />
+          <EntitySet Name="V_UNION_PAGO_LECTURA_MEDIDOR" EntityType="SIFAYCOModel.V_UNION_PAGO_LECTURA_MEDIDOR" />
+          <EntitySet Name="V_UNION_PAGO_OTRO_CARGO" EntityType="SIFAYCOModel.V_UNION_PAGO_OTRO_CARGO" />
+          <AssociationSet Name="FK_T_HALLAZGOS_CT_ANOMALIAS" Association="SIFAYCOModel.FK_T_HALLAZGOS_CT_ANOMALIAS">
+            <End Role="CT_ANOMALIAS" EntitySet="CT_ANOMALIAS" />
+            <End Role="T_OTROS_CARGOS" EntitySet="T_OTROS_CARGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_CONTRATOS_CT_GIROS" Association="SIFAYCOModel.FK_T_CONTRATOS_CT_GIROS">
+            <End Role="CT_GIROS" EntitySet="CT_GIROS" />
+            <End Role="T_CONTRATOS" EntitySet="T_CONTRATOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PAGOS_CT_INSTITUCIONES_BANCARIAS" Association="SIFAYCOModel.FK_T_PAGOS_CT_INSTITUCIONES_BANCARIAS">
+            <End Role="CT_INSTITUCIONES_BANCARIAS" EntitySet="CT_INSTITUCIONES_BANCARIAS" />
+            <End Role="T_PAGOS" EntitySet="T_PAGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PAGOS_CT_METODOS_DE_PAGO" Association="SIFAYCOModel.FK_T_PAGOS_CT_METODOS_DE_PAGO">
+            <End Role="CT_METODOS_DE_PAGO" EntitySet="CT_METODOS_DE_PAGO" />
+            <End Role="T_PAGOS" EntitySet="T_PAGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_OTROS_CARGOS_CT_TIPOS_OTROS_CARGOS" Association="SIFAYCOModel.FK_T_OTROS_CARGOS_CT_TIPOS_OTROS_CARGOS">
+            <End Role="CT_TIPOS_OTROS_CARGOS" EntitySet="CT_TIPOS_OTROS_CARGOS" />
+            <End Role="T_OTROS_CARGOS" EntitySet="T_OTROS_CARGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_CONTRATOS_CT_TOMAS" Association="SIFAYCOModel.FK_T_CONTRATOS_CT_TOMAS">
+            <End Role="CT_TOMAS" EntitySet="CT_TOMAS" />
+            <End Role="T_CONTRATOS" EntitySet="T_CONTRATOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_CONTRATOS_T_USUARIO_SERVICIO" Association="SIFAYCOModel.FK_T_CONTRATOS_T_USUARIO_SERVICIO">
+            <End Role="T_USUARIO_SERVICIO" EntitySet="T_USUARIO_SERVICIO" />
+            <End Role="T_CONTRATOS" EntitySet="T_CONTRATOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DRENAJE_T_CONTRATOS" Association="SIFAYCOModel.FK_T_DRENAJE_T_CONTRATOS">
+            <End Role="T_CONTRATOS" EntitySet="T_CONTRATOS" />
+            <End Role="T_DRENAJE" EntitySet="T_DRENAJE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_HALLAZGOS_T_CONTRATOS" Association="SIFAYCOModel.FK_T_HALLAZGOS_T_CONTRATOS">
+            <End Role="T_CONTRATOS" EntitySet="T_CONTRATOS" />
+            <End Role="T_OTROS_CARGOS" EntitySet="T_OTROS_CARGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_LECTURAS_MEDIDOR_T_CONTRATOS" Association="SIFAYCOModel.FK_T_LECTURAS_MEDIDOR_T_CONTRATOS">
+            <End Role="T_CONTRATOS" EntitySet="T_CONTRATOS" />
+            <End Role="T_LECTURAS_MEDIDOR" EntitySet="T_LECTURAS_MEDIDOR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_DRENAJE_T_EMPLEADOS" Association="SIFAYCOModel.FK_T_DRENAJE_T_EMPLEADOS">
+            <End Role="T_EMPLEADOS" EntitySet="T_EMPLEADOS" />
+            <End Role="T_DRENAJE" EntitySet="T_DRENAJE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_HALLAZGOS_T_EMPLEADOS" Association="SIFAYCOModel.FK_T_HALLAZGOS_T_EMPLEADOS">
+            <End Role="T_EMPLEADOS" EntitySet="T_EMPLEADOS" />
+            <End Role="T_OTROS_CARGOS" EntitySet="T_OTROS_CARGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_HALLAZGOS_T_EMPLEADOS1" Association="SIFAYCOModel.FK_T_HALLAZGOS_T_EMPLEADOS1">
+            <End Role="T_EMPLEADOS" EntitySet="T_EMPLEADOS" />
+            <End Role="T_OTROS_CARGOS" EntitySet="T_OTROS_CARGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_LECTURAS_T_EMPLEADOS" Association="SIFAYCOModel.FK_T_LECTURAS_T_EMPLEADOS">
+            <End Role="T_EMPLEADOS" EntitySet="T_EMPLEADOS" />
+            <End Role="T_LECTURAS_MEDIDOR" EntitySet="T_LECTURAS_MEDIDOR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_LECTURAS_T_EMPLEADOS1" Association="SIFAYCOModel.FK_T_LECTURAS_T_EMPLEADOS1">
+            <End Role="T_EMPLEADOS" EntitySet="T_EMPLEADOS" />
+            <End Role="T_LECTURAS_MEDIDOR" EntitySet="T_LECTURAS_MEDIDOR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PAGOS_T_EMPLEADOS" Association="SIFAYCOModel.FK_T_PAGOS_T_EMPLEADOS">
+            <End Role="T_EMPLEADOS" EntitySet="T_EMPLEADOS" />
+            <End Role="T_PAGOS" EntitySet="T_PAGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_PAGOS_T_EMPLEADOS1" Association="SIFAYCOModel.FK_T_PAGOS_T_EMPLEADOS1">
+            <End Role="T_EMPLEADOS" EntitySet="T_EMPLEADOS" />
+            <End Role="T_PAGOS" EntitySet="T_PAGOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_LECTURAS_MEDIDOR" Association="SIFAYCOModel.FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_LECTURAS_MEDIDOR">
+            <End Role="T_LECTURAS_MEDIDOR" EntitySet="T_LECTURAS_MEDIDOR" />
+            <End Role="T_UNION_PAGO_LECTURA_MEDIDOR" EntitySet="T_UNION_PAGO_LECTURA_MEDIDOR" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_UNION_PAGO_OTRO_CARGO_T_OTROS_CARGOS" Association="SIFAYCOModel.FK_T_UNION_PAGO_OTRO_CARGO_T_OTROS_CARGOS">
+            <End Role="T_OTROS_CARGOS" EntitySet="T_OTROS_CARGOS" />
+            <End Role="T_UNION_PAGO_OTRO_CARGO" EntitySet="T_UNION_PAGO_OTRO_CARGO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_UNION_PAGO_HALLAZGOS_T_PAGOS" Association="SIFAYCOModel.FK_T_UNION_PAGO_HALLAZGOS_T_PAGOS">
+            <End Role="T_PAGOS" EntitySet="T_PAGOS" />
+            <End Role="T_UNION_PAGO_OTRO_CARGO" EntitySet="T_UNION_PAGO_OTRO_CARGO" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_PAGOS" Association="SIFAYCOModel.FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_PAGOS">
+            <End Role="T_PAGOS" EntitySet="T_PAGOS" />
+            <End Role="T_UNION_PAGO_LECTURA_MEDIDOR" EntitySet="T_UNION_PAGO_LECTURA_MEDIDOR" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CT_ANOMALIAS">
+          <Key>
+            <PropertyRef Name="ID_ANOMALIA" />
+          </Key>
+          <Property Name="ID_ANOMALIA" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CLAVE" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="IMPORTE" Type="Double" Nullable="false" />
+          <NavigationProperty Name="T_OTROS_CARGOS" Relationship="SIFAYCOModel.FK_T_HALLAZGOS_CT_ANOMALIAS" FromRole="CT_ANOMALIAS" ToRole="T_OTROS_CARGOS" />
+        </EntityType>
+        <EntityType Name="CT_CAJAS">
+          <Key>
+            <PropertyRef Name="ID_CAJAS" />
+            <PropertyRef Name="CLAVE" />
+            <PropertyRef Name="DESCRIPCION" />
+          </Key>
+          <Property Name="ID_CAJAS" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CLAVE" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CT_GIROS">
+          <Key>
+            <PropertyRef Name="ID_GIRO" />
+          </Key>
+          <Property Name="ID_GIRO" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CLAVE" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="T_CONTRATOS" Relationship="SIFAYCOModel.FK_T_CONTRATOS_CT_GIROS" FromRole="CT_GIROS" ToRole="T_CONTRATOS" />
+        </EntityType>
+        <EntityType Name="CT_INSTITUCIONES_BANCARIAS">
+          <Key>
+            <PropertyRef Name="ID_INSTITUCION_BANCARIA" />
+          </Key>
+          <Property Name="ID_INSTITUCION_BANCARIA" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CLAVE" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="HABILITADO" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="T_PAGOS" Relationship="SIFAYCOModel.FK_T_PAGOS_CT_INSTITUCIONES_BANCARIAS" FromRole="CT_INSTITUCIONES_BANCARIAS" ToRole="T_PAGOS" />
+        </EntityType>
+        <EntityType Name="CT_METODOS_DE_PAGO">
+          <Key>
+            <PropertyRef Name="ID_METODO_PAGO" />
+          </Key>
+          <Property Name="ID_METODO_PAGO" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CLAVE" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="HABILITADO" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="T_PAGOS" Relationship="SIFAYCOModel.FK_T_PAGOS_CT_METODOS_DE_PAGO" FromRole="CT_METODOS_DE_PAGO" ToRole="T_PAGOS" />
+        </EntityType>
+        <EntityType Name="CT_RANGO_TARIFA">
+          <Key>
+            <PropertyRef Name="ID_RANGO_TARIFA" />
+          </Key>
+          <Property Name="ID_RANGO_TARIFA" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="RANGO" Type="Int32" Nullable="false" />
+          <Property Name="LIMITE_SUPERIOR" Type="Int64" Nullable="false" />
+          <Property Name="COSTO_METRO_CUBICO" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CT_STATUS_SERVICIO">
+          <Key>
+            <PropertyRef Name="ID_STATUS_SERVICIO" />
+          </Key>
+          <Property Name="ID_STATUS_SERVICIO" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CT_TARIFAS">
+          <Key>
+            <PropertyRef Name="ID_TARIFA" />
+            <PropertyRef Name="USO" />
+            <PropertyRef Name="CLASE" />
+            <PropertyRef Name="SERVICIO" />
+            <PropertyRef Name="RANGO" />
+            <PropertyRef Name="IMPORTE_CONSUMO_m3" />
+            <PropertyRef Name="CONSUMO_m3" />
+            <PropertyRef Name="IMPORTE" />
+            <PropertyRef Name="IMPORTE_DRENAJE" />
+          </Key>
+          <Property Name="ID_TARIFA" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="USO" Type="Int64" Nullable="false" />
+          <Property Name="CLASE" Type="Int64" Nullable="false" />
+          <Property Name="SERVICIO" Type="Int64" Nullable="false" />
+          <Property Name="RANGO" Type="Int64" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO_m3" Type="Double" Nullable="false" />
+          <Property Name="CONSUMO_m3" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE" Type="Double" Nullable="false" p1:StoreGeneratedPattern="Computed" />
+          <Property Name="IMPORTE_DRENAJE" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CT_TIPOS_OTROS_CARGOS">
+          <Key>
+            <PropertyRef Name="ID_TIPO_OTRO_CARGO" />
+          </Key>
+          <Property Name="ID_TIPO_OTRO_CARGO" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="T_OTROS_CARGOS" Relationship="SIFAYCOModel.FK_T_OTROS_CARGOS_CT_TIPOS_OTROS_CARGOS" FromRole="CT_TIPOS_OTROS_CARGOS" ToRole="T_OTROS_CARGOS" />
+        </EntityType>
+        <EntityType Name="CT_TOMAS">
+          <Key>
+            <PropertyRef Name="ID_TIPO_TOMA" />
+          </Key>
+          <Property Name="ID_TIPO_TOMA" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="GRUPO" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="SGRUPO" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="SSGRUPO" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="UNIDAD" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="CANTIDAD" Type="Double" Nullable="false" />
+          <Property Name="PRECIO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE" Type="Double" Nullable="false" />
+          <NavigationProperty Name="T_CONTRATOS" Relationship="SIFAYCOModel.FK_T_CONTRATOS_CT_TOMAS" FromRole="CT_TOMAS" ToRole="T_CONTRATOS" />
+        </EntityType>
+        <EntityType Name="CT_USO">
+          <Key>
+            <PropertyRef Name="USO" />
+            <PropertyRef Name="CLASE" />
+            <PropertyRef Name="SERVICIO" />
+          </Key>
+          <Property Name="ID_CONTROL_USO" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="USO" Type="Int64" Nullable="false" />
+          <Property Name="CLASE" Type="Int64" Nullable="false" />
+          <Property Name="SERVICIO" Type="Int64" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="T_CONFIGURACION_GENERAL">
+          <Key>
+            <PropertyRef Name="ID_PROPIEDAD" />
+          </Key>
+          <Property Name="ID_PROPIEDAD" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="DESCRIPCION_DE_PROPIEDAD" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="NOMBRE_CLAVE_DE_PROPIEDAD" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="VALOR" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="T_CONTRATOS">
+          <Key>
+            <PropertyRef Name="ID_CONTRATO" />
+          </Key>
+          <Property Name="ID_CONTRATO" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_USUARIO_SERVICIO" Type="Int64" Nullable="false" />
+          <Property Name="FECHA_SOLICITUD" Type="DateTime" Precision="3" />
+          <Property Name="FECHA_INSPECCION" Type="DateTime" Precision="3" />
+          <Property Name="FECHA_CONTRATO" Type="DateTime" Precision="3" />
+          <Property Name="NUMERO_CONTRATO" Type="Int64" />
+          <Property Name="CALLE" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="COLONIA" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="CODIGO_POSTAL" Type="Int32" />
+          <Property Name="SECTOR" Type="Int32" />
+          <Property Name="MANZANA" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="LOTE" Type="Int32" />
+          <Property Name="RUTA" Type="Int32" />
+          <Property Name="PROGRESIVO" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="REFERENCIA" Type="Int64" />
+          <Property Name="USO" Type="Int32" />
+          <Property Name="CLASE" Type="Int32" />
+          <Property Name="SERVICIO" Type="Int32" />
+          <Property Name="NUMERO_HABITANTES" Type="Int32" />
+          <Property Name="ID_GIRO" Type="Int64" Nullable="false" />
+          <Property Name="ID_TIPO_DE_TOMA" Type="Int64" Nullable="false" />
+          <Property Name="COSTO_TOMA" Type="Double" />
+          <Property Name="MEDIDOR_NUMERO" Type="Int64" />
+          <Property Name="MEDIDOR_DIAMETRO_pulg" Type="Double" />
+          <Property Name="MEDIDOR_MARCA" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MEDIDOR_MODELO" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MEDIDOR_INDICADORES" Type="Int32" />
+          <Property Name="ID_STATUS_SERVICIO" Type="Int64" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="DateTime" Precision="3" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CT_GIROS" Relationship="SIFAYCOModel.FK_T_CONTRATOS_CT_GIROS" FromRole="T_CONTRATOS" ToRole="CT_GIROS" />
+          <NavigationProperty Name="CT_TOMAS" Relationship="SIFAYCOModel.FK_T_CONTRATOS_CT_TOMAS" FromRole="T_CONTRATOS" ToRole="CT_TOMAS" />
+          <NavigationProperty Name="T_USUARIO_SERVICIO" Relationship="SIFAYCOModel.FK_T_CONTRATOS_T_USUARIO_SERVICIO" FromRole="T_CONTRATOS" ToRole="T_USUARIO_SERVICIO" />
+          <NavigationProperty Name="T_DRENAJE" Relationship="SIFAYCOModel.FK_T_DRENAJE_T_CONTRATOS" FromRole="T_CONTRATOS" ToRole="T_DRENAJE" />
+          <NavigationProperty Name="T_OTROS_CARGOS" Relationship="SIFAYCOModel.FK_T_HALLAZGOS_T_CONTRATOS" FromRole="T_CONTRATOS" ToRole="T_OTROS_CARGOS" />
+          <NavigationProperty Name="T_LECTURAS_MEDIDOR" Relationship="SIFAYCOModel.FK_T_LECTURAS_MEDIDOR_T_CONTRATOS" FromRole="T_CONTRATOS" ToRole="T_LECTURAS_MEDIDOR" />
+        </EntityType>
+        <EntityType Name="T_DRENAJE">
+          <Key>
+            <PropertyRef Name="ID_DRENAJE" />
+          </Key>
+          <Property Name="ID_DRENAJE" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_CONTRATO" Type="Int64" Nullable="false" />
+          <Property Name="ID_EMPLEADO_CAPTURA" Type="Int64" Nullable="false" />
+          <Property Name="FECHA_CAPTURA" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ES_TARIFA" Type="Int32" Nullable="false" />
+          <Property Name="IMPORTE_DRENAJE" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_DRENAJE_AJUSTADO" Type="Double" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="Double" Nullable="false" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="T_CONTRATOS" Relationship="SIFAYCOModel.FK_T_DRENAJE_T_CONTRATOS" FromRole="T_DRENAJE" ToRole="T_CONTRATOS" />
+          <NavigationProperty Name="T_EMPLEADOS" Relationship="SIFAYCOModel.FK_T_DRENAJE_T_EMPLEADOS" FromRole="T_DRENAJE" ToRole="T_EMPLEADOS" />
+        </EntityType>
+        <EntityType Name="T_EMPLEADOS">
+          <Key>
+            <PropertyRef Name="ID_EMPLEADO" />
+          </Key>
+          <Property Name="ID_EMPLEADO" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE_COMPLETO" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="T_DRENAJE" Relationship="SIFAYCOModel.FK_T_DRENAJE_T_EMPLEADOS" FromRole="T_EMPLEADOS" ToRole="T_DRENAJE" />
+          <NavigationProperty Name="T_OTROS_CARGOS" Relationship="SIFAYCOModel.FK_T_HALLAZGOS_T_EMPLEADOS" FromRole="T_EMPLEADOS" ToRole="T_OTROS_CARGOS" />
+          <NavigationProperty Name="T_OTROS_CARGOS1" Relationship="SIFAYCOModel.FK_T_HALLAZGOS_T_EMPLEADOS1" FromRole="T_EMPLEADOS" ToRole="T_OTROS_CARGOS" />
+          <NavigationProperty Name="T_LECTURAS_MEDIDOR" Relationship="SIFAYCOModel.FK_T_LECTURAS_T_EMPLEADOS" FromRole="T_EMPLEADOS" ToRole="T_LECTURAS_MEDIDOR" />
+          <NavigationProperty Name="T_LECTURAS_MEDIDOR1" Relationship="SIFAYCOModel.FK_T_LECTURAS_T_EMPLEADOS1" FromRole="T_EMPLEADOS" ToRole="T_LECTURAS_MEDIDOR" />
+          <NavigationProperty Name="T_PAGOS" Relationship="SIFAYCOModel.FK_T_PAGOS_T_EMPLEADOS" FromRole="T_EMPLEADOS" ToRole="T_PAGOS" />
+          <NavigationProperty Name="T_PAGOS1" Relationship="SIFAYCOModel.FK_T_PAGOS_T_EMPLEADOS1" FromRole="T_EMPLEADOS" ToRole="T_PAGOS" />
+        </EntityType>
+        <EntityType Name="T_FRECUENCIA">
+          <Key>
+            <PropertyRef Name="ID_FRECUENCIA" />
+          </Key>
+          <Property Name="ID_FRECUENCIA" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DIAS_NATURALES" Type="Double" Nullable="false" />
+          <Property Name="HABILITADO" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_LECTURAS_MEDIDOR">
+          <Key>
+            <PropertyRef Name="ID_LECTURA_MEDIDOR" />
+          </Key>
+          <Property Name="ID_LECTURA_MEDIDOR" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_CONTRATO" Type="Int64" Nullable="false" />
+          <Property Name="FECHA_LECTURA_SITIO" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ID_EMPLEADO_CAPTURA" Type="Int64" Nullable="false" />
+          <Property Name="ID_EMPLEADO_LECTURISTA" Type="Int64" Nullable="false" />
+          <Property Name="ES_TARIFA" Type="Int32" Nullable="false" />
+          <Property Name="LECTURA_MEDIDOR_m3" Type="Double" Nullable="false" />
+          <Property Name="CONSUMO_m3" Type="Double" Nullable="false" />
+          <Property Name="COSTO_METRO_CUBICO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO" Type="Double" Nullable="false" p1:StoreGeneratedPattern="Computed" />
+          <Property Name="IMPORTE_CONSUMO_AJUSTADO" Type="Double" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="Double" Nullable="false" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="T_CONTRATOS" Relationship="SIFAYCOModel.FK_T_LECTURAS_MEDIDOR_T_CONTRATOS" FromRole="T_LECTURAS_MEDIDOR" ToRole="T_CONTRATOS" />
+          <NavigationProperty Name="T_EMPLEADOS" Relationship="SIFAYCOModel.FK_T_LECTURAS_T_EMPLEADOS" FromRole="T_LECTURAS_MEDIDOR" ToRole="T_EMPLEADOS" />
+          <NavigationProperty Name="T_EMPLEADOS1" Relationship="SIFAYCOModel.FK_T_LECTURAS_T_EMPLEADOS1" FromRole="T_LECTURAS_MEDIDOR" ToRole="T_EMPLEADOS" />
+          <NavigationProperty Name="T_UNION_PAGO_LECTURA_MEDIDOR" Relationship="SIFAYCOModel.FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_LECTURAS_MEDIDOR" FromRole="T_LECTURAS_MEDIDOR" ToRole="T_UNION_PAGO_LECTURA_MEDIDOR" />
+        </EntityType>
+        <EntityType Name="T_OTROS_CARGOS">
+          <Key>
+            <PropertyRef Name="ID_OTRO_CARGO" />
+          </Key>
+          <Property Name="ID_OTRO_CARGO" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_TIPO_OTRO_CARGO" Type="Int64" Nullable="false" />
+          <Property Name="ID_EMPLEADO_CAPTURA" Type="Int64" Nullable="false" />
+          <Property Name="ID_EMPLEADO_REPORTA" Type="Int64" Nullable="false" />
+          <Property Name="ID_CONTRATO" Type="Int64" Nullable="false" />
+          <Property Name="ID_ANOMALIA" Type="Int64" Nullable="false" />
+          <Property Name="FECHA_CAPTURA" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="IMPORTE_OTRO_CARGO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_OTRO_CARGO_AJUSTADO" Type="Double" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="Double" Nullable="false" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CT_ANOMALIAS" Relationship="SIFAYCOModel.FK_T_HALLAZGOS_CT_ANOMALIAS" FromRole="T_OTROS_CARGOS" ToRole="CT_ANOMALIAS" />
+          <NavigationProperty Name="CT_TIPOS_OTROS_CARGOS" Relationship="SIFAYCOModel.FK_T_OTROS_CARGOS_CT_TIPOS_OTROS_CARGOS" FromRole="T_OTROS_CARGOS" ToRole="CT_TIPOS_OTROS_CARGOS" />
+          <NavigationProperty Name="T_CONTRATOS" Relationship="SIFAYCOModel.FK_T_HALLAZGOS_T_CONTRATOS" FromRole="T_OTROS_CARGOS" ToRole="T_CONTRATOS" />
+          <NavigationProperty Name="T_EMPLEADOS" Relationship="SIFAYCOModel.FK_T_HALLAZGOS_T_EMPLEADOS" FromRole="T_OTROS_CARGOS" ToRole="T_EMPLEADOS" />
+          <NavigationProperty Name="T_EMPLEADOS1" Relationship="SIFAYCOModel.FK_T_HALLAZGOS_T_EMPLEADOS1" FromRole="T_OTROS_CARGOS" ToRole="T_EMPLEADOS" />
+          <NavigationProperty Name="T_UNION_PAGO_OTRO_CARGO" Relationship="SIFAYCOModel.FK_T_UNION_PAGO_OTRO_CARGO_T_OTROS_CARGOS" FromRole="T_OTROS_CARGOS" ToRole="T_UNION_PAGO_OTRO_CARGO" />
+        </EntityType>
+        <EntityType Name="T_PAGOS">
+          <Key>
+            <PropertyRef Name="ID_PAGO" />
+          </Key>
+          <Property Name="ID_PAGO" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_EMPLEADO_CAJA" Type="Int64" Nullable="false" />
+          <Property Name="FECHA_PAGO" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ID_EMPLEADO_AUTORIZA_DESCUENTO" Type="Int64" Nullable="false" />
+          <Property Name="ID_METODO_PAGO" Type="Int64" Nullable="false" />
+          <Property Name="ID_INSTITUCION_BANCARIA" Type="Int64" Nullable="false" />
+          <Property Name="NUMERO_CUENTA" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FOLIO_AUTORIZACION" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FACHA_MODIFICACION_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="CT_INSTITUCIONES_BANCARIAS" Relationship="SIFAYCOModel.FK_T_PAGOS_CT_INSTITUCIONES_BANCARIAS" FromRole="T_PAGOS" ToRole="CT_INSTITUCIONES_BANCARIAS" />
+          <NavigationProperty Name="CT_METODOS_DE_PAGO" Relationship="SIFAYCOModel.FK_T_PAGOS_CT_METODOS_DE_PAGO" FromRole="T_PAGOS" ToRole="CT_METODOS_DE_PAGO" />
+          <NavigationProperty Name="T_EMPLEADOS" Relationship="SIFAYCOModel.FK_T_PAGOS_T_EMPLEADOS" FromRole="T_PAGOS" ToRole="T_EMPLEADOS" />
+          <NavigationProperty Name="T_EMPLEADOS1" Relationship="SIFAYCOModel.FK_T_PAGOS_T_EMPLEADOS1" FromRole="T_PAGOS" ToRole="T_EMPLEADOS" />
+          <NavigationProperty Name="T_UNION_PAGO_OTRO_CARGO" Relationship="SIFAYCOModel.FK_T_UNION_PAGO_HALLAZGOS_T_PAGOS" FromRole="T_PAGOS" ToRole="T_UNION_PAGO_OTRO_CARGO" />
+          <NavigationProperty Name="T_UNION_PAGO_LECTURA_MEDIDOR" Relationship="SIFAYCOModel.FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_PAGOS" FromRole="T_PAGOS" ToRole="T_UNION_PAGO_LECTURA_MEDIDOR" />
+        </EntityType>
+        <EntityType Name="T_UNION_PAGO_LECTURA_MEDIDOR">
+          <Key>
+            <PropertyRef Name="ID_PAGO" />
+            <PropertyRef Name="ID_LECTURA_MEDIDOR" />
+          </Key>
+          <Property Name="ID_UNION_PAGO_LECTURA_MEDIDOR" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_PAGO" Type="Int64" Nullable="false" />
+          <Property Name="ID_LECTURA_MEDIDOR" Type="Int64" Nullable="false" />
+          <Property Name="IMPORTE_PAGADO" Type="Double" Nullable="false" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="T_LECTURAS_MEDIDOR" Relationship="SIFAYCOModel.FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_LECTURAS_MEDIDOR" FromRole="T_UNION_PAGO_LECTURA_MEDIDOR" ToRole="T_LECTURAS_MEDIDOR" />
+          <NavigationProperty Name="T_PAGOS" Relationship="SIFAYCOModel.FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_PAGOS" FromRole="T_UNION_PAGO_LECTURA_MEDIDOR" ToRole="T_PAGOS" />
+        </EntityType>
+        <EntityType Name="T_UNION_PAGO_OTRO_CARGO">
+          <Key>
+            <PropertyRef Name="ID_PAGO" />
+            <PropertyRef Name="ID_OTRO_CARGO" />
+          </Key>
+          <Property Name="ID_UNION_PAGO_OTRO_CARGO" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_PAGO" Type="Int64" Nullable="false" />
+          <Property Name="ID_OTRO_CARGO" Type="Int64" Nullable="false" />
+          <Property Name="IMPORTE_PAGADO" Type="Double" Nullable="false" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="T_OTROS_CARGOS" Relationship="SIFAYCOModel.FK_T_UNION_PAGO_OTRO_CARGO_T_OTROS_CARGOS" FromRole="T_UNION_PAGO_OTRO_CARGO" ToRole="T_OTROS_CARGOS" />
+          <NavigationProperty Name="T_PAGOS" Relationship="SIFAYCOModel.FK_T_UNION_PAGO_HALLAZGOS_T_PAGOS" FromRole="T_UNION_PAGO_OTRO_CARGO" ToRole="T_PAGOS" />
+        </EntityType>
+        <EntityType Name="T_USUARIO_SERVICIO">
+          <Key>
+            <PropertyRef Name="ID_USUARIO_SERVICIO" />
+          </Key>
+          <Property Name="ID_USUARIO_SERVICIO" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE_USUARIO" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TELEFONO" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+          <Property Name="CORREO_ELECTRONICO" Type="String" MaxLength="100" Unicode="true" FixedLength="true" />
+          <Property Name="CALLE" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="NUMERO_EXTERIOR" Type="Int32" />
+          <Property Name="NUMERO_INTERIOR" Type="Int32" />
+          <Property Name="COLONIA" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="CODIGO_POSTAL" Type="Int32" Nullable="false" />
+          <Property Name="REFERENCIA" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="T_CONTRATOS" Relationship="SIFAYCOModel.FK_T_CONTRATOS_T_USUARIO_SERVICIO" FromRole="T_USUARIO_SERVICIO" ToRole="T_CONTRATOS" />
+        </EntityType>
+        <EntityType Name="V_DRENAJE">
+          <Key>
+            <PropertyRef Name="ID_DRENAJE" />
+            <PropertyRef Name="ID_EMPLEADO_CAPTURA" />
+            <PropertyRef Name="ID_CONTRATO" />
+            <PropertyRef Name="FECHA_CAPTURA" />
+            <PropertyRef Name="IMPORTE_DRENAJE" />
+            <PropertyRef Name="PORCENTAJE_DESCUENTO" />
+            <PropertyRef Name="IMPORTE_DRENAJE_AJUSTADO" />
+            <PropertyRef Name="FECHA_ALTA_REGISTRO" />
+            <PropertyRef Name="FECHA_MODIFICACION_REGISTRO" />
+          </Key>
+          <Property Name="ID_DRENAJE" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_EMPLEADO_CAPTURA" Type="Int64" Nullable="false" />
+          <Property Name="ID_CONTRATO" Type="Int64" Nullable="false" />
+          <Property Name="FECHA_CAPTURA" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="IMPORTE_DRENAJE" Type="Double" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_ANOMALIA_CON_DESCUENTO" Type="Double" />
+          <Property Name="IMPORTE_DRENAJE_AJUSTADO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_DRENAJE_FINAL" Type="Double" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="V_LECTURAS_MEDIDOR">
+          <Key>
+            <PropertyRef Name="ID_LECTURA_MEDIDOR" />
+            <PropertyRef Name="ID_CONTRATO" />
+            <PropertyRef Name="FECHA_LECTURA_SITIO" />
+            <PropertyRef Name="ID_EMPLEADO_CAPTURA" />
+            <PropertyRef Name="ID_EMPLEADO_LECTURISTA" />
+            <PropertyRef Name="ES_TARIFA" />
+            <PropertyRef Name="LECTURA_MEDIDOR_m3" />
+            <PropertyRef Name="CONSUMO_m3" />
+            <PropertyRef Name="COSTO_METRO_CUBICO" />
+            <PropertyRef Name="IMPORTE_CONSUMO" />
+            <PropertyRef Name="PORCENTAJE_DESCUENTO" />
+            <PropertyRef Name="IMPORTE_CONSUMO_AJUSTADO" />
+            <PropertyRef Name="FECHA_ALTA_REGISTRO" />
+            <PropertyRef Name="FECHA_MODIFICACION_REGISTRO" />
+          </Key>
+          <Property Name="ID_LECTURA_MEDIDOR" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_CONTRATO" Type="Int64" Nullable="false" />
+          <Property Name="FECHA_LECTURA_SITIO" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ID_EMPLEADO_CAPTURA" Type="Int64" Nullable="false" />
+          <Property Name="ID_EMPLEADO_LECTURISTA" Type="Int64" Nullable="false" />
+          <Property Name="ES_TARIFA" Type="Int32" Nullable="false" />
+          <Property Name="LECTURA_MEDIDOR_m3" Type="Double" Nullable="false" />
+          <Property Name="CONSUMO_m3" Type="Double" Nullable="false" />
+          <Property Name="COSTO_METRO_CUBICO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO" Type="Double" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO_CON_DESCUENTO" Type="Double" />
+          <Property Name="IMPORTE_CONSUMO_AJUSTADO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO_FINAL" Type="Double" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="V_OTROS_CARGOS">
+          <Key>
+            <PropertyRef Name="ID_OTRO_CARGO" />
+            <PropertyRef Name="ID_EMPLEADO_CAPTURA" />
+            <PropertyRef Name="ID_EMPLEADO_REPORTA" />
+            <PropertyRef Name="ID_CONTRATO" />
+            <PropertyRef Name="ID_ANOMALIA" />
+            <PropertyRef Name="FECHA_CAPTURA" />
+            <PropertyRef Name="IMPORTE_OTRO_CARGO" />
+            <PropertyRef Name="PORCENTAJE_DESCUENTO" />
+            <PropertyRef Name="IMPORTE_OTRO_CARGO_AJUSTADO" />
+            <PropertyRef Name="FECHA_ALTA_REGISTRO" />
+            <PropertyRef Name="FECHA_MODIFICACION_REGISTRO" />
+          </Key>
+          <Property Name="ID_OTRO_CARGO" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_EMPLEADO_CAPTURA" Type="Int64" Nullable="false" />
+          <Property Name="ID_EMPLEADO_REPORTA" Type="Int64" Nullable="false" />
+          <Property Name="ID_CONTRATO" Type="Int64" Nullable="false" />
+          <Property Name="ID_ANOMALIA" Type="Int64" Nullable="false" />
+          <Property Name="FECHA_CAPTURA" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="IMPORTE_OTRO_CARGO" Type="Double" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_OTRO_CARGO_CON_DESCUENTO" Type="Double" />
+          <Property Name="IMPORTE_OTRO_CARGO_AJUSTADO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_OTRO_CARGO_FINAL" Type="Double" />
+          <Property Name="FECHA_ALTA_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FECHA_MODIFICACION_REGISTRO" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="V_TARIFAS">
+          <Key>
+            <PropertyRef Name="DESCRIPCION" />
+            <PropertyRef Name="CLASE" />
+            <PropertyRef Name="SERVICIO" />
+            <PropertyRef Name="RANGO" />
+            <PropertyRef Name="IMPORTE_CONSUMO_m3" />
+            <PropertyRef Name="CONSUMO_m3" />
+            <PropertyRef Name="IMPORTE" />
+          </Key>
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="CLASE" Type="Int64" Nullable="false" />
+          <Property Name="SERVICIO" Type="Int64" Nullable="false" />
+          <Property Name="RANGO" Type="Int64" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO_m3" Type="Double" Nullable="false" />
+          <Property Name="CONSUMO_m3" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="V_UNION_PAGO_LECTURA_MEDIDOR">
+          <Key>
+            <PropertyRef Name="ID_LECTURA_MEDIDOR" />
+            <PropertyRef Name="ID_CONTRATO" />
+            <PropertyRef Name="FECHA_LECTURA_SITIO" />
+            <PropertyRef Name="ID_EMPLEADO_CAPTURA_LECTURA" />
+            <PropertyRef Name="ID_EMPLEADO_LECTURISTA" />
+            <PropertyRef Name="LECTURA_MEDIDOR_m3" />
+            <PropertyRef Name="CONSUMO_m3" />
+            <PropertyRef Name="COSTO_METRO_CUBICO" />
+            <PropertyRef Name="IMPORTE_CONSUMO" />
+            <PropertyRef Name="PORCENTAJE_DESCUENTO" />
+            <PropertyRef Name="IMPORTE_CONSUMO_AJUSTADO" />
+          </Key>
+          <Property Name="ID_LECTURA_MEDIDOR" Type="Int64" Nullable="false" />
+          <Property Name="ID_CONTRATO" Type="Int64" Nullable="false" />
+          <Property Name="FECHA_LECTURA_SITIO" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ID_EMPLEADO_CAPTURA_LECTURA" Type="Int64" Nullable="false" />
+          <Property Name="ID_EMPLEADO_LECTURISTA" Type="Int64" Nullable="false" />
+          <Property Name="LECTURA_MEDIDOR_m3" Type="Double" Nullable="false" />
+          <Property Name="CONSUMO_m3" Type="Double" Nullable="false" />
+          <Property Name="COSTO_METRO_CUBICO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO" Type="Double" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO_CON_DESCUENTO" Type="Double" />
+          <Property Name="IMPORTE_CONSUMO_AJUSTADO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_CONSUMO_FINAL" Type="Double" />
+          <Property Name="ID_PAGO" Type="Int64" />
+          <Property Name="IMPORTE_PAGADO" Type="Double" />
+          <Property Name="IMPORTE_PENDIENTE" Type="Double" />
+          <Property Name="IMPORTE_AFAVOR" Type="Double" />
+        </EntityType>
+        <EntityType Name="V_UNION_PAGO_OTRO_CARGO">
+          <Key>
+            <PropertyRef Name="ID_OTRO_CARGO" />
+            <PropertyRef Name="ID_CONTRATO" />
+            <PropertyRef Name="FECHA_CAPTURA" />
+            <PropertyRef Name="ID_EMPLEADO_REPORTA" />
+            <PropertyRef Name="ID_EMPLEADO_CAPTURA" />
+            <PropertyRef Name="IMPORTE_OTRO_CARGO" />
+            <PropertyRef Name="PORCENTAJE_DESCUENTO" />
+            <PropertyRef Name="IMPORTE_OTRO_CARGO_AJUSTADO" />
+          </Key>
+          <Property Name="ID_OTRO_CARGO" Type="Int64" Nullable="false" />
+          <Property Name="ID_CONTRATO" Type="Int64" Nullable="false" />
+          <Property Name="FECHA_CAPTURA" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ID_EMPLEADO_REPORTA" Type="Int64" Nullable="false" />
+          <Property Name="ID_EMPLEADO_CAPTURA" Type="Int64" Nullable="false" />
+          <Property Name="IMPORTE_OTRO_CARGO" Type="Double" Nullable="false" />
+          <Property Name="PORCENTAJE_DESCUENTO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_OTRO_CARGO_CON_DESCUENTO" Type="Double" />
+          <Property Name="IMPORTE_OTRO_CARGO_AJUSTADO" Type="Double" Nullable="false" />
+          <Property Name="IMPORTE_OTRO_CARGO_FINAL" Type="Double" />
+          <Property Name="ID_PAGO" Type="Int64" />
+          <Property Name="IMPORTE_PAGADO" Type="Double" />
+          <Property Name="IMPORTE_PENDIENTE" Type="Double" />
+          <Property Name="IMPORTE_AFAVOR" Type="Double" />
+        </EntityType>
+        <Association Name="FK_T_HALLAZGOS_CT_ANOMALIAS">
+          <End Role="CT_ANOMALIAS" Type="SIFAYCOModel.CT_ANOMALIAS" Multiplicity="1" />
+          <End Role="T_OTROS_CARGOS" Type="SIFAYCOModel.T_OTROS_CARGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CT_ANOMALIAS">
+              <PropertyRef Name="ID_ANOMALIA" />
+            </Principal>
+            <Dependent Role="T_OTROS_CARGOS">
+              <PropertyRef Name="ID_ANOMALIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_CONTRATOS_CT_GIROS">
+          <End Role="CT_GIROS" Type="SIFAYCOModel.CT_GIROS" Multiplicity="1" />
+          <End Role="T_CONTRATOS" Type="SIFAYCOModel.T_CONTRATOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CT_GIROS">
+              <PropertyRef Name="ID_GIRO" />
+            </Principal>
+            <Dependent Role="T_CONTRATOS">
+              <PropertyRef Name="ID_GIRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PAGOS_CT_INSTITUCIONES_BANCARIAS">
+          <End Role="CT_INSTITUCIONES_BANCARIAS" Type="SIFAYCOModel.CT_INSTITUCIONES_BANCARIAS" Multiplicity="1" />
+          <End Role="T_PAGOS" Type="SIFAYCOModel.T_PAGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CT_INSTITUCIONES_BANCARIAS">
+              <PropertyRef Name="ID_INSTITUCION_BANCARIA" />
+            </Principal>
+            <Dependent Role="T_PAGOS">
+              <PropertyRef Name="ID_INSTITUCION_BANCARIA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PAGOS_CT_METODOS_DE_PAGO">
+          <End Role="CT_METODOS_DE_PAGO" Type="SIFAYCOModel.CT_METODOS_DE_PAGO" Multiplicity="1" />
+          <End Role="T_PAGOS" Type="SIFAYCOModel.T_PAGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CT_METODOS_DE_PAGO">
+              <PropertyRef Name="ID_METODO_PAGO" />
+            </Principal>
+            <Dependent Role="T_PAGOS">
+              <PropertyRef Name="ID_METODO_PAGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_OTROS_CARGOS_CT_TIPOS_OTROS_CARGOS">
+          <End Role="CT_TIPOS_OTROS_CARGOS" Type="SIFAYCOModel.CT_TIPOS_OTROS_CARGOS" Multiplicity="1" />
+          <End Role="T_OTROS_CARGOS" Type="SIFAYCOModel.T_OTROS_CARGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CT_TIPOS_OTROS_CARGOS">
+              <PropertyRef Name="ID_TIPO_OTRO_CARGO" />
+            </Principal>
+            <Dependent Role="T_OTROS_CARGOS">
+              <PropertyRef Name="ID_TIPO_OTRO_CARGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_CONTRATOS_CT_TOMAS">
+          <End Role="CT_TOMAS" Type="SIFAYCOModel.CT_TOMAS" Multiplicity="1" />
+          <End Role="T_CONTRATOS" Type="SIFAYCOModel.T_CONTRATOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CT_TOMAS">
+              <PropertyRef Name="ID_TIPO_TOMA" />
+            </Principal>
+            <Dependent Role="T_CONTRATOS">
+              <PropertyRef Name="ID_TIPO_DE_TOMA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_CONTRATOS_T_USUARIO_SERVICIO">
+          <End Role="T_USUARIO_SERVICIO" Type="SIFAYCOModel.T_USUARIO_SERVICIO" Multiplicity="1" />
+          <End Role="T_CONTRATOS" Type="SIFAYCOModel.T_CONTRATOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_USUARIO_SERVICIO">
+              <PropertyRef Name="ID_USUARIO_SERVICIO" />
+            </Principal>
+            <Dependent Role="T_CONTRATOS">
+              <PropertyRef Name="ID_USUARIO_SERVICIO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DRENAJE_T_CONTRATOS">
+          <End Role="T_CONTRATOS" Type="SIFAYCOModel.T_CONTRATOS" Multiplicity="1" />
+          <End Role="T_DRENAJE" Type="SIFAYCOModel.T_DRENAJE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_CONTRATOS">
+              <PropertyRef Name="ID_CONTRATO" />
+            </Principal>
+            <Dependent Role="T_DRENAJE">
+              <PropertyRef Name="ID_CONTRATO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_HALLAZGOS_T_CONTRATOS">
+          <End Role="T_CONTRATOS" Type="SIFAYCOModel.T_CONTRATOS" Multiplicity="1" />
+          <End Role="T_OTROS_CARGOS" Type="SIFAYCOModel.T_OTROS_CARGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_CONTRATOS">
+              <PropertyRef Name="ID_CONTRATO" />
+            </Principal>
+            <Dependent Role="T_OTROS_CARGOS">
+              <PropertyRef Name="ID_CONTRATO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_LECTURAS_MEDIDOR_T_CONTRATOS">
+          <End Role="T_CONTRATOS" Type="SIFAYCOModel.T_CONTRATOS" Multiplicity="1" />
+          <End Role="T_LECTURAS_MEDIDOR" Type="SIFAYCOModel.T_LECTURAS_MEDIDOR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_CONTRATOS">
+              <PropertyRef Name="ID_CONTRATO" />
+            </Principal>
+            <Dependent Role="T_LECTURAS_MEDIDOR">
+              <PropertyRef Name="ID_CONTRATO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_DRENAJE_T_EMPLEADOS">
+          <End Role="T_EMPLEADOS" Type="SIFAYCOModel.T_EMPLEADOS" Multiplicity="1" />
+          <End Role="T_DRENAJE" Type="SIFAYCOModel.T_DRENAJE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_EMPLEADOS">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Principal>
+            <Dependent Role="T_DRENAJE">
+              <PropertyRef Name="ID_EMPLEADO_CAPTURA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_HALLAZGOS_T_EMPLEADOS">
+          <End Role="T_EMPLEADOS" Type="SIFAYCOModel.T_EMPLEADOS" Multiplicity="1" />
+          <End Role="T_OTROS_CARGOS" Type="SIFAYCOModel.T_OTROS_CARGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_EMPLEADOS">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Principal>
+            <Dependent Role="T_OTROS_CARGOS">
+              <PropertyRef Name="ID_EMPLEADO_CAPTURA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_HALLAZGOS_T_EMPLEADOS1">
+          <End Role="T_EMPLEADOS" Type="SIFAYCOModel.T_EMPLEADOS" Multiplicity="1" />
+          <End Role="T_OTROS_CARGOS" Type="SIFAYCOModel.T_OTROS_CARGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_EMPLEADOS">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Principal>
+            <Dependent Role="T_OTROS_CARGOS">
+              <PropertyRef Name="ID_EMPLEADO_REPORTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_LECTURAS_T_EMPLEADOS">
+          <End Role="T_EMPLEADOS" Type="SIFAYCOModel.T_EMPLEADOS" Multiplicity="1" />
+          <End Role="T_LECTURAS_MEDIDOR" Type="SIFAYCOModel.T_LECTURAS_MEDIDOR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_EMPLEADOS">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Principal>
+            <Dependent Role="T_LECTURAS_MEDIDOR">
+              <PropertyRef Name="ID_EMPLEADO_LECTURISTA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_LECTURAS_T_EMPLEADOS1">
+          <End Role="T_EMPLEADOS" Type="SIFAYCOModel.T_EMPLEADOS" Multiplicity="1" />
+          <End Role="T_LECTURAS_MEDIDOR" Type="SIFAYCOModel.T_LECTURAS_MEDIDOR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_EMPLEADOS">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Principal>
+            <Dependent Role="T_LECTURAS_MEDIDOR">
+              <PropertyRef Name="ID_EMPLEADO_CAPTURA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PAGOS_T_EMPLEADOS">
+          <End Role="T_EMPLEADOS" Type="SIFAYCOModel.T_EMPLEADOS" Multiplicity="1" />
+          <End Role="T_PAGOS" Type="SIFAYCOModel.T_PAGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_EMPLEADOS">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Principal>
+            <Dependent Role="T_PAGOS">
+              <PropertyRef Name="ID_EMPLEADO_CAJA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_PAGOS_T_EMPLEADOS1">
+          <End Role="T_EMPLEADOS" Type="SIFAYCOModel.T_EMPLEADOS" Multiplicity="1" />
+          <End Role="T_PAGOS" Type="SIFAYCOModel.T_PAGOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_EMPLEADOS">
+              <PropertyRef Name="ID_EMPLEADO" />
+            </Principal>
+            <Dependent Role="T_PAGOS">
+              <PropertyRef Name="ID_EMPLEADO_AUTORIZA_DESCUENTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_LECTURAS_MEDIDOR">
+          <End Role="T_LECTURAS_MEDIDOR" Type="SIFAYCOModel.T_LECTURAS_MEDIDOR" Multiplicity="1" />
+          <End Role="T_UNION_PAGO_LECTURA_MEDIDOR" Type="SIFAYCOModel.T_UNION_PAGO_LECTURA_MEDIDOR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_LECTURAS_MEDIDOR">
+              <PropertyRef Name="ID_LECTURA_MEDIDOR" />
+            </Principal>
+            <Dependent Role="T_UNION_PAGO_LECTURA_MEDIDOR">
+              <PropertyRef Name="ID_LECTURA_MEDIDOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_UNION_PAGO_OTRO_CARGO_T_OTROS_CARGOS">
+          <End Role="T_OTROS_CARGOS" Type="SIFAYCOModel.T_OTROS_CARGOS" Multiplicity="1" />
+          <End Role="T_UNION_PAGO_OTRO_CARGO" Type="SIFAYCOModel.T_UNION_PAGO_OTRO_CARGO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_OTROS_CARGOS">
+              <PropertyRef Name="ID_OTRO_CARGO" />
+            </Principal>
+            <Dependent Role="T_UNION_PAGO_OTRO_CARGO">
+              <PropertyRef Name="ID_OTRO_CARGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_UNION_PAGO_HALLAZGOS_T_PAGOS">
+          <End Role="T_PAGOS" Type="SIFAYCOModel.T_PAGOS" Multiplicity="1" />
+          <End Role="T_UNION_PAGO_OTRO_CARGO" Type="SIFAYCOModel.T_UNION_PAGO_OTRO_CARGO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_PAGOS">
+              <PropertyRef Name="ID_PAGO" />
+            </Principal>
+            <Dependent Role="T_UNION_PAGO_OTRO_CARGO">
+              <PropertyRef Name="ID_PAGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_PAGOS">
+          <End Role="T_PAGOS" Type="SIFAYCOModel.T_PAGOS" Multiplicity="1" />
+          <End Role="T_UNION_PAGO_LECTURA_MEDIDOR" Type="SIFAYCOModel.T_UNION_PAGO_LECTURA_MEDIDOR" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_PAGOS">
+              <PropertyRef Name="ID_PAGO" />
+            </Principal>
+            <Dependent Role="T_UNION_PAGO_LECTURA_MEDIDOR">
+              <PropertyRef Name="ID_PAGO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SIFAYCOModelStoreContainer" CdmEntityContainer="SIFAYCOEntities">
+          <EntitySetMapping Name="CT_ANOMALIAS">
+            <EntityTypeMapping TypeName="SIFAYCOModel.CT_ANOMALIAS">
+              <MappingFragment StoreEntitySet="CT_ANOMALIAS">
+                <ScalarProperty Name="ID_ANOMALIA" ColumnName="ID_ANOMALIA" />
+                <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="IMPORTE" ColumnName="IMPORTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CT_CAJAS">
+            <EntityTypeMapping TypeName="SIFAYCOModel.CT_CAJAS">
+              <MappingFragment StoreEntitySet="CT_CAJAS">
+                <ScalarProperty Name="ID_CAJAS" ColumnName="ID_CAJAS" />
+                <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CT_GIROS">
+            <EntityTypeMapping TypeName="SIFAYCOModel.CT_GIROS">
+              <MappingFragment StoreEntitySet="CT_GIROS">
+                <ScalarProperty Name="ID_GIRO" ColumnName="ID_GIRO" />
+                <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CT_INSTITUCIONES_BANCARIAS">
+            <EntityTypeMapping TypeName="SIFAYCOModel.CT_INSTITUCIONES_BANCARIAS">
+              <MappingFragment StoreEntitySet="CT_INSTITUCIONES_BANCARIAS">
+                <ScalarProperty Name="ID_INSTITUCION_BANCARIA" ColumnName="ID_INSTITUCION_BANCARIA" />
+                <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="HABILITADO" ColumnName="HABILITADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CT_METODOS_DE_PAGO">
+            <EntityTypeMapping TypeName="SIFAYCOModel.CT_METODOS_DE_PAGO">
+              <MappingFragment StoreEntitySet="CT_METODOS_DE_PAGO">
+                <ScalarProperty Name="ID_METODO_PAGO" ColumnName="ID_METODO_PAGO" />
+                <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="HABILITADO" ColumnName="HABILITADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CT_RANGO_TARIFA">
+            <EntityTypeMapping TypeName="SIFAYCOModel.CT_RANGO_TARIFA">
+              <MappingFragment StoreEntitySet="CT_RANGO_TARIFA">
+                <ScalarProperty Name="ID_RANGO_TARIFA" ColumnName="ID_RANGO_TARIFA" />
+                <ScalarProperty Name="RANGO" ColumnName="RANGO" />
+                <ScalarProperty Name="LIMITE_SUPERIOR" ColumnName="LIMITE_SUPERIOR" />
+                <ScalarProperty Name="COSTO_METRO_CUBICO" ColumnName="COSTO_METRO_CUBICO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CT_STATUS_SERVICIO">
+            <EntityTypeMapping TypeName="SIFAYCOModel.CT_STATUS_SERVICIO">
+              <MappingFragment StoreEntitySet="CT_STATUS_SERVICIO">
+                <ScalarProperty Name="ID_STATUS_SERVICIO" ColumnName="ID_STATUS_SERVICIO" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CT_TARIFAS">
+            <EntityTypeMapping TypeName="SIFAYCOModel.CT_TARIFAS">
+              <MappingFragment StoreEntitySet="CT_TARIFAS">
+                <ScalarProperty Name="ID_TARIFA" ColumnName="ID_TARIFA" />
+                <ScalarProperty Name="USO" ColumnName="USO" />
+                <ScalarProperty Name="CLASE" ColumnName="CLASE" />
+                <ScalarProperty Name="SERVICIO" ColumnName="SERVICIO" />
+                <ScalarProperty Name="RANGO" ColumnName="RANGO" />
+                <ScalarProperty Name="IMPORTE_CONSUMO_m3" ColumnName="IMPORTE_CONSUMO_m3" />
+                <ScalarProperty Name="CONSUMO_m3" ColumnName="CONSUMO_m3" />
+                <ScalarProperty Name="IMPORTE" ColumnName="IMPORTE" />
+                <ScalarProperty Name="IMPORTE_DRENAJE" ColumnName="IMPORTE_DRENAJE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CT_TIPOS_OTROS_CARGOS">
+            <EntityTypeMapping TypeName="SIFAYCOModel.CT_TIPOS_OTROS_CARGOS">
+              <MappingFragment StoreEntitySet="CT_TIPOS_OTROS_CARGOS">
+                <ScalarProperty Name="ID_TIPO_OTRO_CARGO" ColumnName="ID_TIPO_OTRO_CARGO" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CT_TOMAS">
+            <EntityTypeMapping TypeName="SIFAYCOModel.CT_TOMAS">
+              <MappingFragment StoreEntitySet="CT_TOMAS">
+                <ScalarProperty Name="ID_TIPO_TOMA" ColumnName="ID_TIPO_TOMA" />
+                <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+                <ScalarProperty Name="SGRUPO" ColumnName="SGRUPO" />
+                <ScalarProperty Name="SSGRUPO" ColumnName="SSGRUPO" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="UNIDAD" ColumnName="UNIDAD" />
+                <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+                <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+                <ScalarProperty Name="IMPORTE" ColumnName="IMPORTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CT_USO">
+            <EntityTypeMapping TypeName="SIFAYCOModel.CT_USO">
+              <MappingFragment StoreEntitySet="CT_USO">
+                <ScalarProperty Name="ID_CONTROL_USO" ColumnName="ID_CONTROL_USO" />
+                <ScalarProperty Name="USO" ColumnName="USO" />
+                <ScalarProperty Name="CLASE" ColumnName="CLASE" />
+                <ScalarProperty Name="SERVICIO" ColumnName="SERVICIO" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="SIFAYCOModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_CONFIGURACION_GENERAL">
+            <EntityTypeMapping TypeName="SIFAYCOModel.T_CONFIGURACION_GENERAL">
+              <MappingFragment StoreEntitySet="T_CONFIGURACION_GENERAL">
+                <ScalarProperty Name="ID_PROPIEDAD" ColumnName="ID_PROPIEDAD" />
+                <ScalarProperty Name="DESCRIPCION_DE_PROPIEDAD" ColumnName="DESCRIPCION_DE_PROPIEDAD" />
+                <ScalarProperty Name="NOMBRE_CLAVE_DE_PROPIEDAD" ColumnName="NOMBRE_CLAVE_DE_PROPIEDAD" />
+                <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_CONTRATOS">
+            <EntityTypeMapping TypeName="SIFAYCOModel.T_CONTRATOS">
+              <MappingFragment StoreEntitySet="T_CONTRATOS">
+                <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+                <ScalarProperty Name="ID_USUARIO_SERVICIO" ColumnName="ID_USUARIO_SERVICIO" />
+                <ScalarProperty Name="FECHA_SOLICITUD" ColumnName="FECHA_SOLICITUD" />
+                <ScalarProperty Name="FECHA_INSPECCION" ColumnName="FECHA_INSPECCION" />
+                <ScalarProperty Name="FECHA_CONTRATO" ColumnName="FECHA_CONTRATO" />
+                <ScalarProperty Name="NUMERO_CONTRATO" ColumnName="NUMERO_CONTRATO" />
+                <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+                <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+                <ScalarProperty Name="CODIGO_POSTAL" ColumnName="CODIGO_POSTAL" />
+                <ScalarProperty Name="SECTOR" ColumnName="SECTOR" />
+                <ScalarProperty Name="MANZANA" ColumnName="MANZANA" />
+                <ScalarProperty Name="LOTE" ColumnName="LOTE" />
+                <ScalarProperty Name="RUTA" ColumnName="RUTA" />
+                <ScalarProperty Name="PROGRESIVO" ColumnName="PROGRESIVO" />
+                <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
+                <ScalarProperty Name="USO" ColumnName="USO" />
+                <ScalarProperty Name="CLASE" ColumnName="CLASE" />
+                <ScalarProperty Name="SERVICIO" ColumnName="SERVICIO" />
+                <ScalarProperty Name="NUMERO_HABITANTES" ColumnName="NUMERO_HABITANTES" />
+                <ScalarProperty Name="ID_GIRO" ColumnName="ID_GIRO" />
+                <ScalarProperty Name="ID_TIPO_DE_TOMA" ColumnName="ID_TIPO_DE_TOMA" />
+                <ScalarProperty Name="COSTO_TOMA" ColumnName="COSTO_TOMA" />
+                <ScalarProperty Name="MEDIDOR_NUMERO" ColumnName="MEDIDOR_NUMERO" />
+                <ScalarProperty Name="MEDIDOR_DIAMETRO_pulg" ColumnName="MEDIDOR_DIAMETRO_pulg" />
+                <ScalarProperty Name="MEDIDOR_MARCA" ColumnName="MEDIDOR_MARCA" />
+                <ScalarProperty Name="MEDIDOR_MODELO" ColumnName="MEDIDOR_MODELO" />
+                <ScalarProperty Name="MEDIDOR_INDICADORES" ColumnName="MEDIDOR_INDICADORES" />
+                <ScalarProperty Name="ID_STATUS_SERVICIO" ColumnName="ID_STATUS_SERVICIO" />
+                <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+                <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_DRENAJE">
+            <EntityTypeMapping TypeName="SIFAYCOModel.T_DRENAJE">
+              <MappingFragment StoreEntitySet="T_DRENAJE">
+                <ScalarProperty Name="ID_DRENAJE" ColumnName="ID_DRENAJE" />
+                <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+                <ScalarProperty Name="ID_EMPLEADO_CAPTURA" ColumnName="ID_EMPLEADO_CAPTURA" />
+                <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+                <ScalarProperty Name="ES_TARIFA" ColumnName="ES_TARIFA" />
+                <ScalarProperty Name="IMPORTE_DRENAJE" ColumnName="IMPORTE_DRENAJE" />
+                <ScalarProperty Name="IMPORTE_DRENAJE_AJUSTADO" ColumnName="IMPORTE_DRENAJE_AJUSTADO" />
+                <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+                <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+                <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_EMPLEADOS">
+            <EntityTypeMapping TypeName="SIFAYCOModel.T_EMPLEADOS">
+              <MappingFragment StoreEntitySet="T_EMPLEADOS">
+                <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+                <ScalarProperty Name="NOMBRE_COMPLETO" ColumnName="NOMBRE_COMPLETO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_FRECUENCIA">
+            <EntityTypeMapping TypeName="SIFAYCOModel.T_FRECUENCIA">
+              <MappingFragment StoreEntitySet="T_FRECUENCIA">
+                <ScalarProperty Name="ID_FRECUENCIA" ColumnName="ID_FRECUENCIA" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="DIAS_NATURALES" ColumnName="DIAS_NATURALES" />
+                <ScalarProperty Name="HABILITADO" ColumnName="HABILITADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_LECTURAS_MEDIDOR">
+            <EntityTypeMapping TypeName="SIFAYCOModel.T_LECTURAS_MEDIDOR">
+              <MappingFragment StoreEntitySet="T_LECTURAS_MEDIDOR">
+                <ScalarProperty Name="ID_LECTURA_MEDIDOR" ColumnName="ID_LECTURA_MEDIDOR" />
+                <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+                <ScalarProperty Name="FECHA_LECTURA_SITIO" ColumnName="FECHA_LECTURA_SITIO" />
+                <ScalarProperty Name="ID_EMPLEADO_CAPTURA" ColumnName="ID_EMPLEADO_CAPTURA" />
+                <ScalarProperty Name="ID_EMPLEADO_LECTURISTA" ColumnName="ID_EMPLEADO_LECTURISTA" />
+                <ScalarProperty Name="ES_TARIFA" ColumnName="ES_TARIFA" />
+                <ScalarProperty Name="LECTURA_MEDIDOR_m3" ColumnName="LECTURA_MEDIDOR_m3" />
+                <ScalarProperty Name="CONSUMO_m3" ColumnName="CONSUMO_m3" />
+                <ScalarProperty Name="COSTO_METRO_CUBICO" ColumnName="COSTO_METRO_CUBICO" />
+                <ScalarProperty Name="IMPORTE_CONSUMO" ColumnName="IMPORTE_CONSUMO" />
+                <ScalarProperty Name="IMPORTE_CONSUMO_AJUSTADO" ColumnName="IMPORTE_CONSUMO_AJUSTADO" />
+                <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+                <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+                <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_OTROS_CARGOS">
+            <EntityTypeMapping TypeName="SIFAYCOModel.T_OTROS_CARGOS">
+              <MappingFragment StoreEntitySet="T_OTROS_CARGOS">
+                <ScalarProperty Name="ID_OTRO_CARGO" ColumnName="ID_OTRO_CARGO" />
+                <ScalarProperty Name="ID_TIPO_OTRO_CARGO" ColumnName="ID_TIPO_OTRO_CARGO" />
+                <ScalarProperty Name="ID_EMPLEADO_CAPTURA" ColumnName="ID_EMPLEADO_CAPTURA" />
+                <ScalarProperty Name="ID_EMPLEADO_REPORTA" ColumnName="ID_EMPLEADO_REPORTA" />
+                <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+                <ScalarProperty Name="ID_ANOMALIA" ColumnName="ID_ANOMALIA" />
+                <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+                <ScalarProperty Name="IMPORTE_OTRO_CARGO" ColumnName="IMPORTE_OTRO_CARGO" />
+                <ScalarProperty Name="IMPORTE_OTRO_CARGO_AJUSTADO" ColumnName="IMPORTE_OTRO_CARGO_AJUSTADO" />
+                <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+                <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+                <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_PAGOS">
+            <EntityTypeMapping TypeName="SIFAYCOModel.T_PAGOS">
+              <MappingFragment StoreEntitySet="T_PAGOS">
+                <ScalarProperty Name="ID_PAGO" ColumnName="ID_PAGO" />
+                <ScalarProperty Name="ID_EMPLEADO_CAJA" ColumnName="ID_EMPLEADO_CAJA" />
+                <ScalarProperty Name="FECHA_PAGO" ColumnName="FECHA_PAGO" />
+                <ScalarProperty Name="ID_EMPLEADO_AUTORIZA_DESCUENTO" ColumnName="ID_EMPLEADO_AUTORIZA_DESCUENTO" />
+                <ScalarProperty Name="ID_METODO_PAGO" ColumnName="ID_METODO_PAGO" />
+                <ScalarProperty Name="ID_INSTITUCION_BANCARIA" ColumnName="ID_INSTITUCION_BANCARIA" />
+                <ScalarProperty Name="NUMERO_CUENTA" ColumnName="NUMERO_CUENTA" />
+                <ScalarProperty Name="FOLIO_AUTORIZACION" ColumnName="FOLIO_AUTORIZACION" />
+                <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+                <ScalarProperty Name="FACHA_MODIFICACION_REGISTRO" ColumnName="FACHA_MODIFICACION_REGISTRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_UNION_PAGO_LECTURA_MEDIDOR">
+            <EntityTypeMapping TypeName="SIFAYCOModel.T_UNION_PAGO_LECTURA_MEDIDOR">
+              <MappingFragment StoreEntitySet="T_UNION_PAGO_LECTURA_MEDIDOR">
+                <ScalarProperty Name="ID_UNION_PAGO_LECTURA_MEDIDOR" ColumnName="ID_UNION_PAGO_LECTURA_MEDIDOR" />
+                <ScalarProperty Name="ID_PAGO" ColumnName="ID_PAGO" />
+                <ScalarProperty Name="ID_LECTURA_MEDIDOR" ColumnName="ID_LECTURA_MEDIDOR" />
+                <ScalarProperty Name="IMPORTE_PAGADO" ColumnName="IMPORTE_PAGADO" />
+                <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+                <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_UNION_PAGO_OTRO_CARGO">
+            <EntityTypeMapping TypeName="SIFAYCOModel.T_UNION_PAGO_OTRO_CARGO">
+              <MappingFragment StoreEntitySet="T_UNION_PAGO_OTRO_CARGO">
+                <ScalarProperty Name="ID_UNION_PAGO_OTRO_CARGO" ColumnName="ID_UNION_PAGO_OTRO_CARGO" />
+                <ScalarProperty Name="ID_PAGO" ColumnName="ID_PAGO" />
+                <ScalarProperty Name="ID_OTRO_CARGO" ColumnName="ID_OTRO_CARGO" />
+                <ScalarProperty Name="IMPORTE_PAGADO" ColumnName="IMPORTE_PAGADO" />
+                <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+                <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_USUARIO_SERVICIO">
+            <EntityTypeMapping TypeName="SIFAYCOModel.T_USUARIO_SERVICIO">
+              <MappingFragment StoreEntitySet="T_USUARIO_SERVICIO">
+                <ScalarProperty Name="ID_USUARIO_SERVICIO" ColumnName="ID_USUARIO_SERVICIO" />
+                <ScalarProperty Name="NOMBRE_USUARIO" ColumnName="NOMBRE_USUARIO" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="CORREO_ELECTRONICO" ColumnName="CORREO_ELECTRONICO" />
+                <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+                <ScalarProperty Name="NUMERO_EXTERIOR" ColumnName="NUMERO_EXTERIOR" />
+                <ScalarProperty Name="NUMERO_INTERIOR" ColumnName="NUMERO_INTERIOR" />
+                <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+                <ScalarProperty Name="CODIGO_POSTAL" ColumnName="CODIGO_POSTAL" />
+                <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_DRENAJE">
+            <EntityTypeMapping TypeName="SIFAYCOModel.V_DRENAJE">
+              <MappingFragment StoreEntitySet="V_DRENAJE">
+                <ScalarProperty Name="ID_DRENAJE" ColumnName="ID_DRENAJE" />
+                <ScalarProperty Name="ID_EMPLEADO_CAPTURA" ColumnName="ID_EMPLEADO_CAPTURA" />
+                <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+                <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+                <ScalarProperty Name="IMPORTE_DRENAJE" ColumnName="IMPORTE_DRENAJE" />
+                <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+                <ScalarProperty Name="IMPORTE_ANOMALIA_CON_DESCUENTO" ColumnName="IMPORTE_ANOMALIA_CON_DESCUENTO" />
+                <ScalarProperty Name="IMPORTE_DRENAJE_AJUSTADO" ColumnName="IMPORTE_DRENAJE_AJUSTADO" />
+                <ScalarProperty Name="IMPORTE_DRENAJE_FINAL" ColumnName="IMPORTE_DRENAJE_FINAL" />
+                <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+                <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_LECTURAS_MEDIDOR">
+            <EntityTypeMapping TypeName="SIFAYCOModel.V_LECTURAS_MEDIDOR">
+              <MappingFragment StoreEntitySet="V_LECTURAS_MEDIDOR">
+                <ScalarProperty Name="ID_LECTURA_MEDIDOR" ColumnName="ID_LECTURA_MEDIDOR" />
+                <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+                <ScalarProperty Name="FECHA_LECTURA_SITIO" ColumnName="FECHA_LECTURA_SITIO" />
+                <ScalarProperty Name="ID_EMPLEADO_CAPTURA" ColumnName="ID_EMPLEADO_CAPTURA" />
+                <ScalarProperty Name="ID_EMPLEADO_LECTURISTA" ColumnName="ID_EMPLEADO_LECTURISTA" />
+                <ScalarProperty Name="ES_TARIFA" ColumnName="ES_TARIFA" />
+                <ScalarProperty Name="LECTURA_MEDIDOR_m3" ColumnName="LECTURA_MEDIDOR_m3" />
+                <ScalarProperty Name="CONSUMO_m3" ColumnName="CONSUMO_m3" />
+                <ScalarProperty Name="COSTO_METRO_CUBICO" ColumnName="COSTO_METRO_CUBICO" />
+                <ScalarProperty Name="IMPORTE_CONSUMO" ColumnName="IMPORTE_CONSUMO" />
+                <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+                <ScalarProperty Name="IMPORTE_CONSUMO_CON_DESCUENTO" ColumnName="IMPORTE_CONSUMO_CON_DESCUENTO" />
+                <ScalarProperty Name="IMPORTE_CONSUMO_AJUSTADO" ColumnName="IMPORTE_CONSUMO_AJUSTADO" />
+                <ScalarProperty Name="IMPORTE_CONSUMO_FINAL" ColumnName="IMPORTE_CONSUMO_FINAL" />
+                <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+                <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_OTROS_CARGOS">
+            <EntityTypeMapping TypeName="SIFAYCOModel.V_OTROS_CARGOS">
+              <MappingFragment StoreEntitySet="V_OTROS_CARGOS">
+                <ScalarProperty Name="ID_OTRO_CARGO" ColumnName="ID_OTRO_CARGO" />
+                <ScalarProperty Name="ID_EMPLEADO_CAPTURA" ColumnName="ID_EMPLEADO_CAPTURA" />
+                <ScalarProperty Name="ID_EMPLEADO_REPORTA" ColumnName="ID_EMPLEADO_REPORTA" />
+                <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+                <ScalarProperty Name="ID_ANOMALIA" ColumnName="ID_ANOMALIA" />
+                <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+                <ScalarProperty Name="IMPORTE_OTRO_CARGO" ColumnName="IMPORTE_OTRO_CARGO" />
+                <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+                <ScalarProperty Name="IMPORTE_OTRO_CARGO_CON_DESCUENTO" ColumnName="IMPORTE_OTRO_CARGO_CON_DESCUENTO" />
+                <ScalarProperty Name="IMPORTE_OTRO_CARGO_AJUSTADO" ColumnName="IMPORTE_OTRO_CARGO_AJUSTADO" />
+                <ScalarProperty Name="IMPORTE_OTRO_CARGO_FINAL" ColumnName="IMPORTE_OTRO_CARGO_FINAL" />
+                <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+                <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_TARIFAS">
+            <EntityTypeMapping TypeName="SIFAYCOModel.V_TARIFAS">
+              <MappingFragment StoreEntitySet="V_TARIFAS">
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="CLASE" ColumnName="CLASE" />
+                <ScalarProperty Name="SERVICIO" ColumnName="SERVICIO" />
+                <ScalarProperty Name="RANGO" ColumnName="RANGO" />
+                <ScalarProperty Name="IMPORTE_CONSUMO_m3" ColumnName="IMPORTE_CONSUMO_m3" />
+                <ScalarProperty Name="CONSUMO_m3" ColumnName="CONSUMO_m3" />
+                <ScalarProperty Name="IMPORTE" ColumnName="IMPORTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_UNION_PAGO_LECTURA_MEDIDOR">
+            <EntityTypeMapping TypeName="SIFAYCOModel.V_UNION_PAGO_LECTURA_MEDIDOR">
+              <MappingFragment StoreEntitySet="V_UNION_PAGO_LECTURA_MEDIDOR">
+                <ScalarProperty Name="ID_LECTURA_MEDIDOR" ColumnName="ID_LECTURA_MEDIDOR" />
+                <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+                <ScalarProperty Name="FECHA_LECTURA_SITIO" ColumnName="FECHA_LECTURA_SITIO" />
+                <ScalarProperty Name="ID_EMPLEADO_CAPTURA_LECTURA" ColumnName="ID_EMPLEADO_CAPTURA_LECTURA" />
+                <ScalarProperty Name="ID_EMPLEADO_LECTURISTA" ColumnName="ID_EMPLEADO_LECTURISTA" />
+                <ScalarProperty Name="LECTURA_MEDIDOR_m3" ColumnName="LECTURA_MEDIDOR_m3" />
+                <ScalarProperty Name="CONSUMO_m3" ColumnName="CONSUMO_m3" />
+                <ScalarProperty Name="COSTO_METRO_CUBICO" ColumnName="COSTO_METRO_CUBICO" />
+                <ScalarProperty Name="IMPORTE_CONSUMO" ColumnName="IMPORTE_CONSUMO" />
+                <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+                <ScalarProperty Name="IMPORTE_CONSUMO_CON_DESCUENTO" ColumnName="IMPORTE_CONSUMO_CON_DESCUENTO" />
+                <ScalarProperty Name="IMPORTE_CONSUMO_AJUSTADO" ColumnName="IMPORTE_CONSUMO_AJUSTADO" />
+                <ScalarProperty Name="IMPORTE_CONSUMO_FINAL" ColumnName="IMPORTE_CONSUMO_FINAL" />
+                <ScalarProperty Name="ID_PAGO" ColumnName="ID_PAGO" />
+                <ScalarProperty Name="IMPORTE_PAGADO" ColumnName="IMPORTE_PAGADO" />
+                <ScalarProperty Name="IMPORTE_PENDIENTE" ColumnName="IMPORTE_PENDIENTE" />
+                <ScalarProperty Name="IMPORTE_AFAVOR" ColumnName="IMPORTE_AFAVOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_UNION_PAGO_OTRO_CARGO">
+            <EntityTypeMapping TypeName="SIFAYCOModel.V_UNION_PAGO_OTRO_CARGO">
+              <MappingFragment StoreEntitySet="V_UNION_PAGO_OTRO_CARGO">
+                <ScalarProperty Name="ID_OTRO_CARGO" ColumnName="ID_OTRO_CARGO" />
+                <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+                <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+                <ScalarProperty Name="ID_EMPLEADO_REPORTA" ColumnName="ID_EMPLEADO_REPORTA" />
+                <ScalarProperty Name="ID_EMPLEADO_CAPTURA" ColumnName="ID_EMPLEADO_CAPTURA" />
+                <ScalarProperty Name="IMPORTE_OTRO_CARGO" ColumnName="IMPORTE_OTRO_CARGO" />
+                <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+                <ScalarProperty Name="IMPORTE_OTRO_CARGO_CON_DESCUENTO" ColumnName="IMPORTE_OTRO_CARGO_CON_DESCUENTO" />
+                <ScalarProperty Name="IMPORTE_OTRO_CARGO_AJUSTADO" ColumnName="IMPORTE_OTRO_CARGO_AJUSTADO" />
+                <ScalarProperty Name="IMPORTE_OTRO_CARGO_FINAL" ColumnName="IMPORTE_OTRO_CARGO_FINAL" />
+                <ScalarProperty Name="ID_PAGO" ColumnName="ID_PAGO" />
+                <ScalarProperty Name="IMPORTE_PAGADO" ColumnName="IMPORTE_PAGADO" />
+                <ScalarProperty Name="IMPORTE_PENDIENTE" ColumnName="IMPORTE_PENDIENTE" />
+                <ScalarProperty Name="IMPORTE_AFAVOR" ColumnName="IMPORTE_AFAVOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

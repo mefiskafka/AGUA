@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0040a12be3b746e7aa96f1d9eb6fae6b" Name="Diagrama1">
+        <EntityTypeShape EntityType="SIFAYCOModel.CT_ANOMALIAS" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.CT_CAJAS" Width="1.5" PointX="2.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.CT_GIROS" Width="1.5" PointX="1.5" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.CT_INSTITUCIONES_BANCARIAS" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.CT_METODOS_DE_PAGO" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.CT_RANGO_TARIFA" Width="1.5" PointX="4.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.CT_STATUS_SERVICIO" Width="1.5" PointX="5.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.CT_TARIFAS" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.CT_TIPOS_OTROS_CARGOS" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.CT_TOMAS" Width="1.5" PointX="1.5" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.CT_USO" Width="1.5" PointX="7.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.T_CONFIGURACION_GENERAL" Width="1.5" PointX="9.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.T_CONTRATOS" Width="1.5" PointX="0.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.T_DRENAJE" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.T_EMPLEADOS" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.T_FRECUENCIA" Width="1.5" PointX="9.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.T_LECTURAS_MEDIDOR" Width="1.5" PointX="6" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.T_OTROS_CARGOS" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.T_PAGOS" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.T_UNION_PAGO_LECTURA_MEDIDOR" Width="1.5" PointX="8.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.T_UNION_PAGO_OTRO_CARGO" Width="1.5" PointX="8.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.T_USUARIO_SERVICIO" Width="1.5" PointX="1.5" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.V_DRENAJE" Width="1.5" PointX="10.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.V_LECTURAS_MEDIDOR" Width="1.5" PointX="11.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.V_OTROS_CARGOS" Width="1.5" PointX="12.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.V_TARIFAS" Width="1.5" PointX="12.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.V_UNION_PAGO_LECTURA_MEDIDOR" Width="1.5" PointX="14.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="SIFAYCOModel.V_UNION_PAGO_OTRO_CARGO" Width="1.5" PointX="14.75" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_HALLAZGOS_CT_ANOMALIAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_CONTRATOS_CT_GIROS" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_PAGOS_CT_INSTITUCIONES_BANCARIAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_PAGOS_CT_METODOS_DE_PAGO" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_OTROS_CARGOS_CT_TIPOS_OTROS_CARGOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_CONTRATOS_CT_TOMAS" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_CONTRATOS_T_USUARIO_SERVICIO" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_DRENAJE_T_CONTRATOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_HALLAZGOS_T_CONTRATOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_LECTURAS_MEDIDOR_T_CONTRATOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_DRENAJE_T_EMPLEADOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_HALLAZGOS_T_EMPLEADOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_HALLAZGOS_T_EMPLEADOS1" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_LECTURAS_T_EMPLEADOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_LECTURAS_T_EMPLEADOS1" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_PAGOS_T_EMPLEADOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_PAGOS_T_EMPLEADOS1" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_LECTURAS_MEDIDOR" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_UNION_PAGO_OTRO_CARGO_T_OTROS_CARGOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_UNION_PAGO_HALLAZGOS_T_PAGOS" ManuallyRouted="false" />
+        <AssociationConnector Association="SIFAYCOModel.FK_T_UNION_PAGO_LECTURA_MEDIDOR_T_PAGOS" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
