@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SIFAYCOModelStoreContainer" CdmEntityContainer="SIFAYCOEntities">
+    <EntitySetMapping Name="CT_ANOMALIAS">
+      <EntityTypeMapping TypeName="SIFAYCOModel.CT_ANOMALIAS">
+        <MappingFragment StoreEntitySet="CT_ANOMALIAS">
+          <ScalarProperty Name="ID_ANOMALIA" ColumnName="ID_ANOMALIA" />
+          <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="IMPORTE" ColumnName="IMPORTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_CAJAS">
+      <EntityTypeMapping TypeName="SIFAYCOModel.CT_CAJAS">
+        <MappingFragment StoreEntitySet="CT_CAJAS">
+          <ScalarProperty Name="ID_CAJAS" ColumnName="ID_CAJAS" />
+          <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_GIROS">
+      <EntityTypeMapping TypeName="SIFAYCOModel.CT_GIROS">
+        <MappingFragment StoreEntitySet="CT_GIROS">
+          <ScalarProperty Name="ID_GIRO" ColumnName="ID_GIRO" />
+          <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_INSTITUCIONES_BANCARIAS">
+      <EntityTypeMapping TypeName="SIFAYCOModel.CT_INSTITUCIONES_BANCARIAS">
+        <MappingFragment StoreEntitySet="CT_INSTITUCIONES_BANCARIAS">
+          <ScalarProperty Name="ID_INSTITUCION_BANCARIA" ColumnName="ID_INSTITUCION_BANCARIA" />
+          <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="HABILITADO" ColumnName="HABILITADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_METODOS_DE_PAGO">
+      <EntityTypeMapping TypeName="SIFAYCOModel.CT_METODOS_DE_PAGO">
+        <MappingFragment StoreEntitySet="CT_METODOS_DE_PAGO">
+          <ScalarProperty Name="ID_METODO_PAGO" ColumnName="ID_METODO_PAGO" />
+          <ScalarProperty Name="CLAVE" ColumnName="CLAVE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="HABILITADO" ColumnName="HABILITADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_RANGO_TARIFA">
+      <EntityTypeMapping TypeName="SIFAYCOModel.CT_RANGO_TARIFA">
+        <MappingFragment StoreEntitySet="CT_RANGO_TARIFA">
+          <ScalarProperty Name="ID_RANGO_TARIFA" ColumnName="ID_RANGO_TARIFA" />
+          <ScalarProperty Name="RANGO" ColumnName="RANGO" />
+          <ScalarProperty Name="LIMITE_SUPERIOR" ColumnName="LIMITE_SUPERIOR" />
+          <ScalarProperty Name="COSTO_METRO_CUBICO" ColumnName="COSTO_METRO_CUBICO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_STATUS_SERVICIO">
+      <EntityTypeMapping TypeName="SIFAYCOModel.CT_STATUS_SERVICIO">
+        <MappingFragment StoreEntitySet="CT_STATUS_SERVICIO">
+          <ScalarProperty Name="ID_STATUS_SERVICIO" ColumnName="ID_STATUS_SERVICIO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_TARIFAS">
+      <EntityTypeMapping TypeName="SIFAYCOModel.CT_TARIFAS">
+        <MappingFragment StoreEntitySet="CT_TARIFAS">
+          <ScalarProperty Name="ID_TARIFA" ColumnName="ID_TARIFA" />
+          <ScalarProperty Name="USO" ColumnName="USO" />
+          <ScalarProperty Name="CLASE" ColumnName="CLASE" />
+          <ScalarProperty Name="SERVICIO" ColumnName="SERVICIO" />
+          <ScalarProperty Name="RANGO" ColumnName="RANGO" />
+          <ScalarProperty Name="IMPORTE_CONSUMO_m3" ColumnName="IMPORTE_CONSUMO_m3" />
+          <ScalarProperty Name="CONSUMO_m3" ColumnName="CONSUMO_m3" />
+          <ScalarProperty Name="IMPORTE" ColumnName="IMPORTE" />
+          <ScalarProperty Name="IMPORTE_DRENAJE" ColumnName="IMPORTE_DRENAJE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_TIPOS_OTROS_CARGOS">
+      <EntityTypeMapping TypeName="SIFAYCOModel.CT_TIPOS_OTROS_CARGOS">
+        <MappingFragment StoreEntitySet="CT_TIPOS_OTROS_CARGOS">
+          <ScalarProperty Name="ID_TIPO_OTRO_CARGO" ColumnName="ID_TIPO_OTRO_CARGO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_TOMAS">
+      <EntityTypeMapping TypeName="SIFAYCOModel.CT_TOMAS">
+        <MappingFragment StoreEntitySet="CT_TOMAS">
+          <ScalarProperty Name="ID_TIPO_TOMA" ColumnName="ID_TIPO_TOMA" />
+          <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+          <ScalarProperty Name="SGRUPO" ColumnName="SGRUPO" />
+          <ScalarProperty Name="SSGRUPO" ColumnName="SSGRUPO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="UNIDAD" ColumnName="UNIDAD" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="IMPORTE" ColumnName="IMPORTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CT_USO">
+      <EntityTypeMapping TypeName="SIFAYCOModel.CT_USO">
+        <MappingFragment StoreEntitySet="CT_USO">
+          <ScalarProperty Name="ID_CONTROL_USO" ColumnName="ID_CONTROL_USO" />
+          <ScalarProperty Name="USO" ColumnName="USO" />
+          <ScalarProperty Name="CLASE" ColumnName="CLASE" />
+          <ScalarProperty Name="SERVICIO" ColumnName="SERVICIO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="SIFAYCOModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_CONFIGURACION_GENERAL">
+      <EntityTypeMapping TypeName="SIFAYCOModel.T_CONFIGURACION_GENERAL">
+        <MappingFragment StoreEntitySet="T_CONFIGURACION_GENERAL">
+          <ScalarProperty Name="ID_PROPIEDAD" ColumnName="ID_PROPIEDAD" />
+          <ScalarProperty Name="DESCRIPCION_DE_PROPIEDAD" ColumnName="DESCRIPCION_DE_PROPIEDAD" />
+          <ScalarProperty Name="NOMBRE_CLAVE_DE_PROPIEDAD" ColumnName="NOMBRE_CLAVE_DE_PROPIEDAD" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_CONTRATOS">
+      <EntityTypeMapping TypeName="SIFAYCOModel.T_CONTRATOS">
+        <MappingFragment StoreEntitySet="T_CONTRATOS">
+          <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+          <ScalarProperty Name="ID_USUARIO_SERVICIO" ColumnName="ID_USUARIO_SERVICIO" />
+          <ScalarProperty Name="FECHA_SOLICITUD" ColumnName="FECHA_SOLICITUD" />
+          <ScalarProperty Name="FECHA_INSPECCION" ColumnName="FECHA_INSPECCION" />
+          <ScalarProperty Name="FECHA_CONTRATO" ColumnName="FECHA_CONTRATO" />
+          <ScalarProperty Name="NUMERO_CONTRATO" ColumnName="NUMERO_CONTRATO" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CODIGO_POSTAL" ColumnName="CODIGO_POSTAL" />
+          <ScalarProperty Name="SECTOR" ColumnName="SECTOR" />
+          <ScalarProperty Name="MANZANA" ColumnName="MANZANA" />
+          <ScalarProperty Name="LOTE" ColumnName="LOTE" />
+          <ScalarProperty Name="RUTA" ColumnName="RUTA" />
+          <ScalarProperty Name="PROGRESIVO" ColumnName="PROGRESIVO" />
+          <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
+          <ScalarProperty Name="USO" ColumnName="USO" />
+          <ScalarProperty Name="CLASE" ColumnName="CLASE" />
+          <ScalarProperty Name="SERVICIO" ColumnName="SERVICIO" />
+          <ScalarProperty Name="NUMERO_HABITANTES" ColumnName="NUMERO_HABITANTES" />
+          <ScalarProperty Name="ID_GIRO" ColumnName="ID_GIRO" />
+          <ScalarProperty Name="ID_TIPO_DE_TOMA" ColumnName="ID_TIPO_DE_TOMA" />
+          <ScalarProperty Name="COSTO_TOMA" ColumnName="COSTO_TOMA" />
+          <ScalarProperty Name="MEDIDOR_NUMERO" ColumnName="MEDIDOR_NUMERO" />
+          <ScalarProperty Name="MEDIDOR_DIAMETRO_pulg" ColumnName="MEDIDOR_DIAMETRO_pulg" />
+          <ScalarProperty Name="MEDIDOR_MARCA" ColumnName="MEDIDOR_MARCA" />
+          <ScalarProperty Name="MEDIDOR_MODELO" ColumnName="MEDIDOR_MODELO" />
+          <ScalarProperty Name="MEDIDOR_INDICADORES" ColumnName="MEDIDOR_INDICADORES" />
+          <ScalarProperty Name="ID_STATUS_SERVICIO" ColumnName="ID_STATUS_SERVICIO" />
+          <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+          <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_DRENAJE">
+      <EntityTypeMapping TypeName="SIFAYCOModel.T_DRENAJE">
+        <MappingFragment StoreEntitySet="T_DRENAJE">
+          <ScalarProperty Name="ID_DRENAJE" ColumnName="ID_DRENAJE" />
+          <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+          <ScalarProperty Name="ID_EMPLEADO_CAPTURA" ColumnName="ID_EMPLEADO_CAPTURA" />
+          <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+          <ScalarProperty Name="ES_TARIFA" ColumnName="ES_TARIFA" />
+          <ScalarProperty Name="IMPORTE_DRENAJE" ColumnName="IMPORTE_DRENAJE" />
+          <ScalarProperty Name="IMPORTE_DRENAJE_AJUSTADO" ColumnName="IMPORTE_DRENAJE_AJUSTADO" />
+          <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+          <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+          <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_EMPLEADOS">
+      <EntityTypeMapping TypeName="SIFAYCOModel.T_EMPLEADOS">
+        <MappingFragment StoreEntitySet="T_EMPLEADOS">
+          <ScalarProperty Name="ID_EMPLEADO" ColumnName="ID_EMPLEADO" />
+          <ScalarProperty Name="NOMBRE_COMPLETO" ColumnName="NOMBRE_COMPLETO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_FRECUENCIA">
+      <EntityTypeMapping TypeName="SIFAYCOModel.T_FRECUENCIA">
+        <MappingFragment StoreEntitySet="T_FRECUENCIA">
+          <ScalarProperty Name="ID_FRECUENCIA" ColumnName="ID_FRECUENCIA" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="DIAS_NATURALES" ColumnName="DIAS_NATURALES" />
+          <ScalarProperty Name="HABILITADO" ColumnName="HABILITADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_LECTURAS_MEDIDOR">
+      <EntityTypeMapping TypeName="SIFAYCOModel.T_LECTURAS_MEDIDOR">
+        <MappingFragment StoreEntitySet="T_LECTURAS_MEDIDOR">
+          <ScalarProperty Name="ID_LECTURA_MEDIDOR" ColumnName="ID_LECTURA_MEDIDOR" />
+          <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+          <ScalarProperty Name="FECHA_LECTURA_SITIO" ColumnName="FECHA_LECTURA_SITIO" />
+          <ScalarProperty Name="ID_EMPLEADO_CAPTURA" ColumnName="ID_EMPLEADO_CAPTURA" />
+          <ScalarProperty Name="ID_EMPLEADO_LECTURISTA" ColumnName="ID_EMPLEADO_LECTURISTA" />
+          <ScalarProperty Name="ES_TARIFA" ColumnName="ES_TARIFA" />
+          <ScalarProperty Name="LECTURA_MEDIDOR_m3" ColumnName="LECTURA_MEDIDOR_m3" />
+          <ScalarProperty Name="CONSUMO_m3" ColumnName="CONSUMO_m3" />
+          <ScalarProperty Name="COSTO_METRO_CUBICO" ColumnName="COSTO_METRO_CUBICO" />
+          <ScalarProperty Name="IMPORTE_CONSUMO" ColumnName="IMPORTE_CONSUMO" />
+          <ScalarProperty Name="IMPORTE_CONSUMO_AJUSTADO" ColumnName="IMPORTE_CONSUMO_AJUSTADO" />
+          <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+          <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+          <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_OTROS_CARGOS">
+      <EntityTypeMapping TypeName="SIFAYCOModel.T_OTROS_CARGOS">
+        <MappingFragment StoreEntitySet="T_OTROS_CARGOS">
+          <ScalarProperty Name="ID_OTRO_CARGO" ColumnName="ID_OTRO_CARGO" />
+          <ScalarProperty Name="ID_TIPO_OTRO_CARGO" ColumnName="ID_TIPO_OTRO_CARGO" />
+          <ScalarProperty Name="ID_EMPLEADO_CAPTURA" ColumnName="ID_EMPLEADO_CAPTURA" />
+          <ScalarProperty Name="ID_EMPLEADO_REPORTA" ColumnName="ID_EMPLEADO_REPORTA" />
+          <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+          <ScalarProperty Name="ID_ANOMALIA" ColumnName="ID_ANOMALIA" />
+          <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+          <ScalarProperty Name="IMPORTE_OTRO_CARGO" ColumnName="IMPORTE_OTRO_CARGO" />
+          <ScalarProperty Name="IMPORTE_OTRO_CARGO_AJUSTADO" ColumnName="IMPORTE_OTRO_CARGO_AJUSTADO" />
+          <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+          <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+          <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_PAGOS">
+      <EntityTypeMapping TypeName="SIFAYCOModel.T_PAGOS">
+        <MappingFragment StoreEntitySet="T_PAGOS">
+          <ScalarProperty Name="ID_PAGO" ColumnName="ID_PAGO" />
+          <ScalarProperty Name="ID_EMPLEADO_CAJA" ColumnName="ID_EMPLEADO_CAJA" />
+          <ScalarProperty Name="FECHA_PAGO" ColumnName="FECHA_PAGO" />
+          <ScalarProperty Name="ID_EMPLEADO_AUTORIZA_DESCUENTO" ColumnName="ID_EMPLEADO_AUTORIZA_DESCUENTO" />
+          <ScalarProperty Name="ID_METODO_PAGO" ColumnName="ID_METODO_PAGO" />
+          <ScalarProperty Name="ID_INSTITUCION_BANCARIA" ColumnName="ID_INSTITUCION_BANCARIA" />
+          <ScalarProperty Name="NUMERO_CUENTA" ColumnName="NUMERO_CUENTA" />
+          <ScalarProperty Name="FOLIO_AUTORIZACION" ColumnName="FOLIO_AUTORIZACION" />
+          <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+          <ScalarProperty Name="FACHA_MODIFICACION_REGISTRO" ColumnName="FACHA_MODIFICACION_REGISTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_UNION_PAGO_LECTURA_MEDIDOR">
+      <EntityTypeMapping TypeName="SIFAYCOModel.T_UNION_PAGO_LECTURA_MEDIDOR">
+        <MappingFragment StoreEntitySet="T_UNION_PAGO_LECTURA_MEDIDOR">
+          <ScalarProperty Name="ID_UNION_PAGO_LECTURA_MEDIDOR" ColumnName="ID_UNION_PAGO_LECTURA_MEDIDOR" />
+          <ScalarProperty Name="ID_PAGO" ColumnName="ID_PAGO" />
+          <ScalarProperty Name="ID_LECTURA_MEDIDOR" ColumnName="ID_LECTURA_MEDIDOR" />
+          <ScalarProperty Name="IMPORTE_PAGADO" ColumnName="IMPORTE_PAGADO" />
+          <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+          <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_UNION_PAGO_OTRO_CARGO">
+      <EntityTypeMapping TypeName="SIFAYCOModel.T_UNION_PAGO_OTRO_CARGO">
+        <MappingFragment StoreEntitySet="T_UNION_PAGO_OTRO_CARGO">
+          <ScalarProperty Name="ID_UNION_PAGO_OTRO_CARGO" ColumnName="ID_UNION_PAGO_OTRO_CARGO" />
+          <ScalarProperty Name="ID_PAGO" ColumnName="ID_PAGO" />
+          <ScalarProperty Name="ID_OTRO_CARGO" ColumnName="ID_OTRO_CARGO" />
+          <ScalarProperty Name="IMPORTE_PAGADO" ColumnName="IMPORTE_PAGADO" />
+          <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+          <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_USUARIO_SERVICIO">
+      <EntityTypeMapping TypeName="SIFAYCOModel.T_USUARIO_SERVICIO">
+        <MappingFragment StoreEntitySet="T_USUARIO_SERVICIO">
+          <ScalarProperty Name="ID_USUARIO_SERVICIO" ColumnName="ID_USUARIO_SERVICIO" />
+          <ScalarProperty Name="NOMBRE_USUARIO" ColumnName="NOMBRE_USUARIO" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="CORREO_ELECTRONICO" ColumnName="CORREO_ELECTRONICO" />
+          <ScalarProperty Name="CALLE" ColumnName="CALLE" />
+          <ScalarProperty Name="NUMERO_EXTERIOR" ColumnName="NUMERO_EXTERIOR" />
+          <ScalarProperty Name="NUMERO_INTERIOR" ColumnName="NUMERO_INTERIOR" />
+          <ScalarProperty Name="COLONIA" ColumnName="COLONIA" />
+          <ScalarProperty Name="CODIGO_POSTAL" ColumnName="CODIGO_POSTAL" />
+          <ScalarProperty Name="REFERENCIA" ColumnName="REFERENCIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_DRENAJE">
+      <EntityTypeMapping TypeName="SIFAYCOModel.V_DRENAJE">
+        <MappingFragment StoreEntitySet="V_DRENAJE">
+          <ScalarProperty Name="ID_DRENAJE" ColumnName="ID_DRENAJE" />
+          <ScalarProperty Name="ID_EMPLEADO_CAPTURA" ColumnName="ID_EMPLEADO_CAPTURA" />
+          <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+          <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+          <ScalarProperty Name="IMPORTE_DRENAJE" ColumnName="IMPORTE_DRENAJE" />
+          <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+          <ScalarProperty Name="IMPORTE_ANOMALIA_CON_DESCUENTO" ColumnName="IMPORTE_ANOMALIA_CON_DESCUENTO" />
+          <ScalarProperty Name="IMPORTE_DRENAJE_AJUSTADO" ColumnName="IMPORTE_DRENAJE_AJUSTADO" />
+          <ScalarProperty Name="IMPORTE_DRENAJE_FINAL" ColumnName="IMPORTE_DRENAJE_FINAL" />
+          <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+          <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_LECTURAS_MEDIDOR">
+      <EntityTypeMapping TypeName="SIFAYCOModel.V_LECTURAS_MEDIDOR">
+        <MappingFragment StoreEntitySet="V_LECTURAS_MEDIDOR">
+          <ScalarProperty Name="ID_LECTURA_MEDIDOR" ColumnName="ID_LECTURA_MEDIDOR" />
+          <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+          <ScalarProperty Name="FECHA_LECTURA_SITIO" ColumnName="FECHA_LECTURA_SITIO" />
+          <ScalarProperty Name="ID_EMPLEADO_CAPTURA" ColumnName="ID_EMPLEADO_CAPTURA" />
+          <ScalarProperty Name="ID_EMPLEADO_LECTURISTA" ColumnName="ID_EMPLEADO_LECTURISTA" />
+          <ScalarProperty Name="ES_TARIFA" ColumnName="ES_TARIFA" />
+          <ScalarProperty Name="LECTURA_MEDIDOR_m3" ColumnName="LECTURA_MEDIDOR_m3" />
+          <ScalarProperty Name="CONSUMO_m3" ColumnName="CONSUMO_m3" />
+          <ScalarProperty Name="COSTO_METRO_CUBICO" ColumnName="COSTO_METRO_CUBICO" />
+          <ScalarProperty Name="IMPORTE_CONSUMO" ColumnName="IMPORTE_CONSUMO" />
+          <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+          <ScalarProperty Name="IMPORTE_CONSUMO_CON_DESCUENTO" ColumnName="IMPORTE_CONSUMO_CON_DESCUENTO" />
+          <ScalarProperty Name="IMPORTE_CONSUMO_AJUSTADO" ColumnName="IMPORTE_CONSUMO_AJUSTADO" />
+          <ScalarProperty Name="IMPORTE_CONSUMO_FINAL" ColumnName="IMPORTE_CONSUMO_FINAL" />
+          <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+          <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_OTROS_CARGOS">
+      <EntityTypeMapping TypeName="SIFAYCOModel.V_OTROS_CARGOS">
+        <MappingFragment StoreEntitySet="V_OTROS_CARGOS">
+          <ScalarProperty Name="ID_OTRO_CARGO" ColumnName="ID_OTRO_CARGO" />
+          <ScalarProperty Name="ID_EMPLEADO_CAPTURA" ColumnName="ID_EMPLEADO_CAPTURA" />
+          <ScalarProperty Name="ID_EMPLEADO_REPORTA" ColumnName="ID_EMPLEADO_REPORTA" />
+          <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+          <ScalarProperty Name="ID_ANOMALIA" ColumnName="ID_ANOMALIA" />
+          <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+          <ScalarProperty Name="IMPORTE_OTRO_CARGO" ColumnName="IMPORTE_OTRO_CARGO" />
+          <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+          <ScalarProperty Name="IMPORTE_OTRO_CARGO_CON_DESCUENTO" ColumnName="IMPORTE_OTRO_CARGO_CON_DESCUENTO" />
+          <ScalarProperty Name="IMPORTE_OTRO_CARGO_AJUSTADO" ColumnName="IMPORTE_OTRO_CARGO_AJUSTADO" />
+          <ScalarProperty Name="IMPORTE_OTRO_CARGO_FINAL" ColumnName="IMPORTE_OTRO_CARGO_FINAL" />
+          <ScalarProperty Name="FECHA_ALTA_REGISTRO" ColumnName="FECHA_ALTA_REGISTRO" />
+          <ScalarProperty Name="FECHA_MODIFICACION_REGISTRO" ColumnName="FECHA_MODIFICACION_REGISTRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_TARIFAS">
+      <EntityTypeMapping TypeName="SIFAYCOModel.V_TARIFAS">
+        <MappingFragment StoreEntitySet="V_TARIFAS">
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CLASE" ColumnName="CLASE" />
+          <ScalarProperty Name="SERVICIO" ColumnName="SERVICIO" />
+          <ScalarProperty Name="RANGO" ColumnName="RANGO" />
+          <ScalarProperty Name="IMPORTE_CONSUMO_m3" ColumnName="IMPORTE_CONSUMO_m3" />
+          <ScalarProperty Name="CONSUMO_m3" ColumnName="CONSUMO_m3" />
+          <ScalarProperty Name="IMPORTE" ColumnName="IMPORTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_UNION_PAGO_LECTURA_MEDIDOR">
+      <EntityTypeMapping TypeName="SIFAYCOModel.V_UNION_PAGO_LECTURA_MEDIDOR">
+        <MappingFragment StoreEntitySet="V_UNION_PAGO_LECTURA_MEDIDOR">
+          <ScalarProperty Name="ID_LECTURA_MEDIDOR" ColumnName="ID_LECTURA_MEDIDOR" />
+          <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+          <ScalarProperty Name="FECHA_LECTURA_SITIO" ColumnName="FECHA_LECTURA_SITIO" />
+          <ScalarProperty Name="ID_EMPLEADO_CAPTURA_LECTURA" ColumnName="ID_EMPLEADO_CAPTURA_LECTURA" />
+          <ScalarProperty Name="ID_EMPLEADO_LECTURISTA" ColumnName="ID_EMPLEADO_LECTURISTA" />
+          <ScalarProperty Name="LECTURA_MEDIDOR_m3" ColumnName="LECTURA_MEDIDOR_m3" />
+          <ScalarProperty Name="CONSUMO_m3" ColumnName="CONSUMO_m3" />
+          <ScalarProperty Name="COSTO_METRO_CUBICO" ColumnName="COSTO_METRO_CUBICO" />
+          <ScalarProperty Name="IMPORTE_CONSUMO" ColumnName="IMPORTE_CONSUMO" />
+          <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+          <ScalarProperty Name="IMPORTE_CONSUMO_CON_DESCUENTO" ColumnName="IMPORTE_CONSUMO_CON_DESCUENTO" />
+          <ScalarProperty Name="IMPORTE_CONSUMO_AJUSTADO" ColumnName="IMPORTE_CONSUMO_AJUSTADO" />
+          <ScalarProperty Name="IMPORTE_CONSUMO_FINAL" ColumnName="IMPORTE_CONSUMO_FINAL" />
+          <ScalarProperty Name="ID_PAGO" ColumnName="ID_PAGO" />
+          <ScalarProperty Name="IMPORTE_PAGADO" ColumnName="IMPORTE_PAGADO" />
+          <ScalarProperty Name="IMPORTE_PENDIENTE" ColumnName="IMPORTE_PENDIENTE" />
+          <ScalarProperty Name="IMPORTE_AFAVOR" ColumnName="IMPORTE_AFAVOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="V_UNION_PAGO_OTRO_CARGO">
+      <EntityTypeMapping TypeName="SIFAYCOModel.V_UNION_PAGO_OTRO_CARGO">
+        <MappingFragment StoreEntitySet="V_UNION_PAGO_OTRO_CARGO">
+          <ScalarProperty Name="ID_OTRO_CARGO" ColumnName="ID_OTRO_CARGO" />
+          <ScalarProperty Name="ID_CONTRATO" ColumnName="ID_CONTRATO" />
+          <ScalarProperty Name="FECHA_CAPTURA" ColumnName="FECHA_CAPTURA" />
+          <ScalarProperty Name="ID_EMPLEADO_REPORTA" ColumnName="ID_EMPLEADO_REPORTA" />
+          <ScalarProperty Name="ID_EMPLEADO_CAPTURA" ColumnName="ID_EMPLEADO_CAPTURA" />
+          <ScalarProperty Name="IMPORTE_OTRO_CARGO" ColumnName="IMPORTE_OTRO_CARGO" />
+          <ScalarProperty Name="PORCENTAJE_DESCUENTO" ColumnName="PORCENTAJE_DESCUENTO" />
+          <ScalarProperty Name="IMPORTE_OTRO_CARGO_CON_DESCUENTO" ColumnName="IMPORTE_OTRO_CARGO_CON_DESCUENTO" />
+          <ScalarProperty Name="IMPORTE_OTRO_CARGO_AJUSTADO" ColumnName="IMPORTE_OTRO_CARGO_AJUSTADO" />
+          <ScalarProperty Name="IMPORTE_OTRO_CARGO_FINAL" ColumnName="IMPORTE_OTRO_CARGO_FINAL" />
+          <ScalarProperty Name="ID_PAGO" ColumnName="ID_PAGO" />
+          <ScalarProperty Name="IMPORTE_PAGADO" ColumnName="IMPORTE_PAGADO" />
+          <ScalarProperty Name="IMPORTE_PENDIENTE" ColumnName="IMPORTE_PENDIENTE" />
+          <ScalarProperty Name="IMPORTE_AFAVOR" ColumnName="IMPORTE_AFAVOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
