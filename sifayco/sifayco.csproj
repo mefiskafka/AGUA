@@ -220,6 +220,11 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SIFAYCODataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SIFAYCODataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>MainDb.tt</DependentUpon>
     </Compile>
@@ -363,6 +368,17 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\Contratos.cshtml" />
     <Content Include="Views\Home\_Dashboard.cshtml" />
+    <Content Include="SIFAYCODataSet.xsc">
+      <DependentUpon>SIFAYCODataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="SIFAYCODataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SIFAYCODataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="SIFAYCODataSet.xss">
+      <DependentUpon>SIFAYCODataSet.xsd</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -372,6 +388,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reportes\Report1.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
